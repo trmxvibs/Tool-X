@@ -1,0 +1,60 @@
+#!/bin/bash
+# Tool Name: Tool-X
+# Date: 25/1/2025
+# Function to install Python if not present
+install_python() {
+  if [ ! -e "$1" ]; then
+    echo "Installing Python and Python3..."
+    $2 update -y
+    $2 upgrade -y
+    $2 install python -y
+    $2 install python3 -y
+  fi
+}
+
+# Check for apt-get (Debian/Ubuntu)
+if [ -e /usr/bin/apt-get ]; then
+  if [ -e /usr/lib/sudo ]; then
+    install_python "/usr/bin/python3" "sudo apt-get"
+  else
+    install_python "/usr/bin/python3" "apt-get"
+  fi
+fi
+
+# Check for pkg (Termux)
+if [ -d /data/data/com.termux/files/usr/bin ]; then
+  install_python "/data/data/com.termux/files/usr/bin/python3" "pkg"
+fi
+
+# Check for yum (Red Hat/CentOS)
+if [ -e /usr/bin/yum ]; then
+  if [ -e /usr/lib/sudo ]; then
+    install_python "/usr/bin/python3" "sudo yum"
+  else
+    install_python "/usr/bin/python3" "yum"
+  fi
+fi
+
+# Check for brew (macOS)
+if [ -e /usr/local/bin/brew ]; then
+  install_python "/usr/local/bin/python3" "brew install"
+fi
+
+# Check for apk (Alpine Linux)
+if [ -e /usr/bin/apk ]; then
+  install_python "/usr/bin/python3" "apk"
+fi
+
+# Install Python dependencies and run the installation script
+if [ -e requirements.txt ]; then
+  echo "Installing required Python packages..."
+  pip install -r requirements.txt
+fi
+
+if [ -e install.py ]; then
+  echo "Running installation script..."
+  python3 install.py
+fi
+
+echo "Setup complete."
+exit 0
