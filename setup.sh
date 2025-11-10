@@ -1,4 +1,7 @@
 #!/bin/bash
+# Date 08/11/2025
+# Github : https://github.com/trmxvibs
+# Author : Lokesh kumar
 
 # setup.sh - Tool-X Centralized Installation Script
 # This script handles all prerequisites, mirror fixes, and sets up the global 'toolx' alias.
