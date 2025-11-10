@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # setup.sh - Tool-X Centralized Installation Script
+# This script handles all prerequisites, mirror fixes, and sets up the global 'toolx' alias.
 
 TOOL_DIR="$HOME/tool-x"
 REPO_URL="https://github.com/trmxvibs/Tool-X" 
@@ -28,8 +29,8 @@ pkg install git python figlet ruby -y
 
 # 3. Fix Lolcat (Using Ruby Gem Manager)
 echo -e "\n${YELLOW}[*] Installing lolcat via Ruby Gem (Fix for common Termux error)...${NC}"
-# SC2181 Fix Applied: Check the status of the command directly
-if ! gem install lolcat; then  # Line 38 Fix
+# SC2181 Fix: We run the command and check its status directly.
+if ! gem install lolcat; then  # Fix for line 38 area
     echo -e "${RED}[!] WARNING: 'gem install lolcat' failed. Banner may not be colored. Manual check needed.${NC}"
 fi
 
@@ -44,8 +45,8 @@ if [ -d "$TOOL_DIR" ]; then
     git pull
 else
     echo -e "\n${GREEN}[*] Cloning Tool-X into $TOOL_DIR...${NC}"
-    # SC2181 Fix Applied: Check the status of the command directly
-    if ! git clone $REPO_URL "$TOOL_DIR"; then # Line 55 Fix
+    # SC2181 Fix: Combined git clone and status check
+    if ! git clone $REPO_URL "$TOOL_DIR"; then # Fix for line 55 area
         echo -e "${RED}[!] Git clone failed. Please ensure the repository URL is correct.${NC}"
         exit 1 # Exit if cloning fails
     fi
