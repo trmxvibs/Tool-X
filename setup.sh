@@ -1,10 +1,8 @@
 #!/bin/bash
 
 # setup.sh - Tool-X Centralized Installation Script
-# This script handles all prerequisites, mirror fixes, and sets up the global 'toolx' alias.
 
 TOOL_DIR="$HOME/tool-x"
-# IMPORTANT: Update this URL to your actual GitHub repository URL.
 REPO_URL="https://github.com/trmxvibs/Tool-X" 
 INSTALLER_SCRIPT="tool-x.py"
 ALIAS_NAME="toolx"
@@ -26,13 +24,12 @@ pkg update -y
 
 # 2. Install Core Dependencies (Git, Python, Figlet, Ruby)
 echo -e "\n${YELLOW}[*] Installing core system dependencies (git, python, figlet, ruby)...${NC}"
-# Note: Since pkg install is idempotent (safe to run multiple times), we run it directly.
 pkg install git python figlet ruby -y
 
 # 3. Fix Lolcat (Using Ruby Gem Manager)
 echo -e "\n${YELLOW}[*] Installing lolcat via Ruby Gem (Fix for common Termux error)...${NC}"
-# SC2181 Fix: Check the gem install status directly
-if ! gem install lolcat; then
+# SC2181 Fix Applied: Check the status of the command directly
+if ! gem install lolcat; then  # Line 38 Fix
     echo -e "${RED}[!] WARNING: 'gem install lolcat' failed. Banner may not be colored. Manual check needed.${NC}"
 fi
 
@@ -43,12 +40,12 @@ pip install colorama
 # 5. Clone or Create the Tool Directory
 if [ -d "$TOOL_DIR" ]; then
     echo -e "\n${RED}[!] Directory $TOOL_DIR already exists. Pulling latest changes...${NC}"
-    cd "$TOOL_DIR" || exit # If cd fails, exit the script
+    cd "$TOOL_DIR" || exit
     git pull
 else
     echo -e "\n${GREEN}[*] Cloning Tool-X into $TOOL_DIR...${NC}"
-    # SC2181 Fix: Combined git clone and status check
-    if ! git clone $REPO_URL "$TOOL_DIR"; then
+    # SC2181 Fix Applied: Check the status of the command directly
+    if ! git clone $REPO_URL "$TOOL_DIR"; then # Line 55 Fix
         echo -e "${RED}[!] Git clone failed. Please ensure the repository URL is correct.${NC}"
         exit 1 # Exit if cloning fails
     fi
@@ -71,7 +68,7 @@ else
     echo -e "${GREEN}[+] Alias '$ALIAS_NAME' created.${NC}"
 fi
 
-# 8. Final Banner and Instructions (Requires figlet and lolcat installed previously)
+# 8. Final Banner and Instructions
 echo -e "\n\n${GREEN}================================================${NC}"
 echo -e "${GREEN}[!] Tool-X Installation Complete!${NC}"
 figlet Tool-X | lolcat -a -d 10
