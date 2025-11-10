@@ -60,6 +60,10 @@ After restarting Termux, start the framework from any directory with:
 
 - [96] Self-Destruct — Remove the entire ~/tool-x directory and the global toolx alias.
 
+# Screenshot
+<img width="722" height="648" alt="image" src="https://github.com/user-attachments/assets/c431f56f-c68c-4be0-a37a-76af323cb9f8" />
+
+
 ## Maintenance & Troubleshooting
 
 If a package fails: check mirror fixes included in the script.
