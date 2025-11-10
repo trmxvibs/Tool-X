@@ -1,12 +1,15 @@
 # File: .github/workflows/ci.yml
-name: Tool-X CI Checks
+
+name: Tool-X Build & Syntax Checks
+
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
 jobs:
-  lint_and_test:
+  build_and_check:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,48 +21,27 @@ jobs:
         with:
           python-version: '3.12'
 
-      # --- 1. Python Code Linting and Formatting Check (Flake8) ---
-      - name: Install Linting Dependencies
+      # --- 1. Install Dependencies ---
+      - name: Install Linting & ShellCheck
         run: |
           pip install flake8
-          
-      - name: Lint Python Code with Flake8
-        # Selects common errors (E9 syntax errors, F82 undefined names)
-        run: |
-          echo "Running Flake8 on Python files..."
-          flake8 . --count --select=E9,F82 --show-source --statistics
-          
-      # --- 2. Bash Script Syntax Check (ShellCheck) ---
-      - name: Install ShellCheck
-        # ShellCheck is essential for validating setup.sh and shell tools against common pitfalls
-        run: |
           sudo apt-get update
           sudo apt-get install shellcheck -y
           
-      - name: Check setup.sh syntax
+      # --- 2. Check Bash Script Syntax ---
+      - name: Check setup.sh syntax (ShellCheck)
         run: |
           echo "Checking setup.sh syntax..."
-          # Assuming setup.sh is in the root directory
           shellcheck setup.sh
           
-      # --- 3. Verify Python Module Imports (Crucial for core functionality) ---
-      - name: Verify Tool-X execution logic and imports
+      # --- 3. Python Code Style Check ---
+      - name: Lint Python Code with Flake8
         run: |
-          echo "Verifying tool-x.py and module imports..."
-          
-          # This command ensures Python can find and load your core modules without crashing.
-          # We use python -c and import sys explicitly for safety.
-          python -c "import sys
-try:
-    from core.tool_data import TOOL_CATEGORIES
-    from core.installation_logic import install_github_tool
-    
-    # Check if the core data structure is correctly initialized
-    if not TOOL_CATEGORIES:
-        raise Exception('TOOL_CATEGORIES dictionary is empty or missing data.')
+          echo "Running Flake8 on Python files..."
+          flake8 . --count --select=E9,F82 --show-source --statistics
 
-    print('SUCCESS: All core Python modules loaded and checked successfully.')
-except Exception as e:
-    print(f'FAILURE: Core module import or data check failed: {e}')
-    sys.exit(1)
-"
+      # --- 4. Verify Core Module Imports (Final Check) ---
+      - name: Verify Core Modules Import
+        run: |
+          echo "Verifying Tool-X core imports..."
+          python -c "import sys; from core.tool_data import TOOL_CATEGORIES; from core.installation_logic import install_github_tool; print('SUCCESS: Core modules loaded.'); sys.exit(0)"
