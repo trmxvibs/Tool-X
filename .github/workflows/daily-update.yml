@@ -1,0 +1,26 @@
+name: Daily Auto Update
+
+on:
+  schedule:
+    - cron: "0 0 * * *" 
+  workflow_dispatch:     
+
+jobs:
+  update-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run date update script
+        run: |
+          chmod +x update_date.sh
+          ./update_date.sh
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add daily_update.txt
+          git commit -m "⏰ Auto update: $(date)"
+          git push
