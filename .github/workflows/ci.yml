@@ -1,13 +1,10 @@
 # File: .github/workflows/ci.yml
-
 name: Tool-X CI Checks
-
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 jobs:
   lint_and_test:
     runs-on: ubuntu-latest
