@@ -40,7 +40,7 @@ def banner():
     """Displays the dynamic colored figlet banner for Tool-X."""
     os.system("clear")
     os.system("figlet Tool-X | lolcat -a -d 10")
-    print(Fore.GREEN + Style.BRIGHT + "       -- Termux Tool-X Installer v2.0 --" + Style.RESET_ALL)
+    print(Fore.GREEN + Style.BRIGHT + "       -- Lokesh Kumar --" + Style.RESET_ALL)
     print("--------------------------------------------------")
 
 # Define constants for the self-uninstaller
