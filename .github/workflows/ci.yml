@@ -1,0 +1,65 @@
+# File: .github/workflows/ci.yml
+
+name: Tool-X CI Checks
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+        
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # --- 1. Python Code Linting and Formatting Check (Flake8) ---
+      - name: Install Linting Dependencies
+        run: |
+          pip install flake8
+          
+      - name: Lint Python Code with Flake8
+        # This checks tool-x.py and the core/ files for style issues and syntax errors
+        run: |
+          echo "Running Flake8 on Python files..."
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          if [ $? -ne 0 ]; then
+            echo "Flake8 found errors. Please fix Python syntax/style issues."
+            exit 1
+          fi
+
+      # --- 2. Bash Script Syntax Check ---
+      - name: Install ShellCheck
+        # ShellCheck is essential for validating setup.sh and shell tools against common pitfalls
+        run: |
+          sudo apt-get update
+          sudo apt-get install shellcheck -y
+          
+      - name: Check setup.sh syntax
+        run: |
+          echo "Checking setup.sh syntax..."
+          shellcheck setup.sh
+          
+      # --- 3. Verify Script Executability ---
+      - name: Verify Tool-X execution logic
+        run: |
+          echo "Verifying tool-x.py and module imports..."
+          
+          # This command ensures Python can find and load your core modules without crashing
+          python -c "
+try:
+    from core.tool_data import TOOL_CATEGORIES
+    from core.installation_logic import install_github_tool
+    print('SUCCESS: All core Python modules loaded successfully.')
+except Exception as e:
+    print(f'FAILURE: Core module import failed: {e}')
+    sys.exit(1)
+"
