@@ -5,6 +5,8 @@
 # Author : Lokesh kumar
 import os
 import sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
 from time import sleep as timeout
 from colorama import Fore, Style, init
 
