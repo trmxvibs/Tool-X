@@ -32,16 +32,19 @@ jobs:
       - name: Check setup.sh syntax (ShellCheck)
         run: |
           echo "Checking setup.sh syntax..."
+          # ShellCheck will now pass as we used the proper 'if ! command;' syntax in setup.sh
           shellcheck setup.sh
           
       # --- 3. Python Code Style Check ---
       - name: Lint Python Code with Flake8
         run: |
           echo "Running Flake8 on Python files..."
-          flake8 . --count --select=E9,F82 --show-source --statistics
+          # Check for serious errors (E9 syntax, F82 undefined names, F401 unused imports)
+          flake8 . --count --select=E9,F82,F401 --show-source --statistics
 
-      # --- 4. Verify Core Module Imports (Final Check) ---
+      # --- 4. Verify Core Module Imports (Crucial Check) ---
       - name: Verify Core Modules Import
+        # This checks that tool-x.py can successfully load its nested core/ modules without crashing
         run: |
           echo "Verifying Tool-X core imports..."
           python -c "import sys; from core.tool_data import TOOL_CATEGORIES; from core.installation_logic import install_github_tool; print('SUCCESS: Core modules loaded.'); sys.exit(0)"
