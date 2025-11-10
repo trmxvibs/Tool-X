@@ -2,6 +2,7 @@
 # Date : 08/11/2025
 # Github : https://github.com/trmxvibs
 # Author : Lokesh kumar
+# File: core/installation_logic.py
 import os
 import time
 import sys
@@ -31,8 +32,6 @@ def track_installed_tool(tool_name, tool_dir):
         f.write(f"{tool_name}:{tool_dir}\n")
 
 # --- Installation Utilities ---
-
-# NOTE: mirror change is now handled by the external setup script.
 
 def check_package_manager(pkg_manager):
     """Ensures pip, npm, or go is installed if required."""
@@ -79,6 +78,7 @@ def handle_post_install(tool_name, tool_dir, help_cmd):
             print(Fore.GREEN + f"[*] Opening directory: {tool_dir}")
             os.execlp("bash", "bash", "-c", f"cd {tool_dir} && exec bash")
 
+    # If the user says no, the function returns. The main script handles the restart.
     print(Fore.WHITE + "[*] Returning to the main menu...")
     time.sleep(1) 
     return
