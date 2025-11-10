@@ -2,8 +2,9 @@ name: Daily README Badge Update
 
 on:
   schedule:
-    - cron: "0 0 * * *"   
-  workflow_dispatch:      
+    - cron: "0 0 * * *"   # Runs daily at midnight UTC
+  workflow_dispatch:      # Allow manual runs
+
 jobs:
   update-badge:
     runs-on: ubuntu-latest
@@ -12,12 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update README badge
+      - name: Update README date and badge
         run: |
           chmod +x update_date.sh
           ./update_date.sh
 
-      - name: Commit and push if changed
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
