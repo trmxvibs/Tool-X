@@ -1,7 +1,4 @@
 #!/bin/bash
-# Date 08/11/2025
-# Github : https://github.com/trmxvibs
-# Author : Lokesh kumar
 
 # setup.sh - Tool-X Centralized Installation Script
 # This script handles all prerequisites, mirror fixes, and sets up the global 'toolx' alias.
@@ -24,19 +21,19 @@ echo -e "${GREEN}================================================${NC}"
 
 # 1. Fix Mirrors and Update Packages
 echo -e "\n${YELLOW}[*] Attempting to fix Termux repositories and updating packages...${NC}"
-# Running termux-change-repo to prompt the user to select fresh mirrors 
 termux-change-repo 
 pkg update -y
 
 # 2. Install Core Dependencies (Git, Python, Figlet, Ruby)
 echo -e "\n${YELLOW}[*] Installing core system dependencies (git, python, figlet, ruby)...${NC}"
+# Note: Since pkg install is idempotent (safe to run multiple times), we run it directly.
 pkg install git python figlet ruby -y
 
 # 3. Fix Lolcat (Using Ruby Gem Manager)
 echo -e "\n${YELLOW}[*] Installing lolcat via Ruby Gem (Fix for common Termux error)...${NC}"
-gem install lolcat
-if [ $? -ne 0 ]; then
-    echo -e "${RED}[!] WARNING: 'gem install lolcat' failed. Banner may not be colored.${NC}"
+# SC2181 Fix: Check the gem install status directly
+if ! gem install lolcat; then
+    echo -e "${RED}[!] WARNING: 'gem install lolcat' failed. Banner may not be colored. Manual check needed.${NC}"
 fi
 
 # 4. Install Python Library (colorama)
@@ -46,15 +43,14 @@ pip install colorama
 # 5. Clone or Create the Tool Directory
 if [ -d "$TOOL_DIR" ]; then
     echo -e "\n${RED}[!] Directory $TOOL_DIR already exists. Pulling latest changes...${NC}"
-    cd "$TOOL_DIR" || exit
+    cd "$TOOL_DIR" || exit # If cd fails, exit the script
     git pull
 else
     echo -e "\n${GREEN}[*] Cloning Tool-X into $TOOL_DIR...${NC}"
-    git clone $REPO_URL "$TOOL_DIR"
-    
-    if [ $? -ne 0 ]; then
+    # SC2181 Fix: Combined git clone and status check
+    if ! git clone $REPO_URL "$TOOL_DIR"; then
         echo -e "${RED}[!] Git clone failed. Please ensure the repository URL is correct.${NC}"
-        exit 1
+        exit 1 # Exit if cloning fails
     fi
     cd "$TOOL_DIR" || exit
 fi
@@ -70,16 +66,14 @@ ALIAS_LINE="alias $ALIAS_NAME='python $TOOL_DIR/$INSTALLER_SCRIPT'"
 if grep -q "$ALIAS_LINE" "$BASHRC"; then
     echo -e "${YELLOW}[!] Alias '$ALIAS_NAME' already exists. Skipping.${NC}"
 else
-    # Use 'echo -e' to handle potential newline formatting issues
     echo -e "\n# Tool-X Framework Alias" >> "$BASHRC"
     echo "$ALIAS_LINE" >> "$BASHRC"
     echo -e "${GREEN}[+] Alias '$ALIAS_NAME' created.${NC}"
 fi
 
-# 8. Final Banner and Instructions
+# 8. Final Banner and Instructions (Requires figlet and lolcat installed previously)
 echo -e "\n\n${GREEN}================================================${NC}"
 echo -e "${GREEN}[!] Tool-X Installation Complete!${NC}"
-# Dynamic Lolcat Banner
 figlet Tool-X | lolcat -a -d 10
 echo -e "${GREEN}================================================${NC}"
 echo -e "${YELLOW}You can now access the tool from anywhere by typing:${NC}"
