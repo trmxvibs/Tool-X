@@ -15,10 +15,15 @@
   <img src="https://img.shields.io/badge/License-MIT-blue?style=flat" alt="License">
 </p>
 
+
+[![ShellCheck](https://github.com/trmxvibs/Tool-X/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/trmxvibs/Tool-X/actions/workflows/shellcheck.yml)
+
+
 ---
 ## Overview
 
 Tool-X is an installation and management framework designed to turn a Termux environment into a robust mobile penetration-testing toolkit. It automates dependency fixes, repository cloning, mirror adjustments, and common Termux issues so you can focus on using tools instead of installing them.
+
 
 ## Key Features
 - One-step setup for 60+ commonly used tools.
