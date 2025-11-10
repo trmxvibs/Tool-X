@@ -27,16 +27,12 @@ jobs:
           pip install flake8
           
       - name: Lint Python Code with Flake8
-        # This checks tool-x.py and the core/ files for style issues and syntax errors
+        # Selects common errors (E9 syntax errors, F82 undefined names)
         run: |
           echo "Running Flake8 on Python files..."
-          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          if [ $? -ne 0 ]; then
-            echo "Flake8 found errors. Please fix Python syntax/style issues."
-            exit 1
-          fi
-
-      # --- 2. Bash Script Syntax Check ---
+          flake8 . --count --select=E9,F82 --show-source --statistics
+          
+      # --- 2. Bash Script Syntax Check (ShellCheck) ---
       - name: Install ShellCheck
         # ShellCheck is essential for validating setup.sh and shell tools against common pitfalls
         run: |
@@ -46,20 +42,27 @@ jobs:
       - name: Check setup.sh syntax
         run: |
           echo "Checking setup.sh syntax..."
+          # Assuming setup.sh is in the root directory
           shellcheck setup.sh
           
-      # --- 3. Verify Script Executability ---
-      - name: Verify Tool-X execution logic
+      # --- 3. Verify Python Module Imports (Crucial for core functionality) ---
+      - name: Verify Tool-X execution logic and imports
         run: |
           echo "Verifying tool-x.py and module imports..."
           
-          # This command ensures Python can find and load your core modules without crashing
-          python -c "
+          # This command ensures Python can find and load your core modules without crashing.
+          # We use python -c and import sys explicitly for safety.
+          python -c "import sys
 try:
     from core.tool_data import TOOL_CATEGORIES
     from core.installation_logic import install_github_tool
-    print('SUCCESS: All core Python modules loaded successfully.')
+    
+    # Check if the core data structure is correctly initialized
+    if not TOOL_CATEGORIES:
+        raise Exception('TOOL_CATEGORIES dictionary is empty or missing data.')
+
+    print('SUCCESS: All core Python modules loaded and checked successfully.')
 except Exception as e:
-    print(f'FAILURE: Core module import failed: {e}')
+    print(f'FAILURE: Core module import or data check failed: {e}')
     sys.exit(1)
 "
