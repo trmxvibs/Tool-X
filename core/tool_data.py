@@ -2,6 +2,7 @@
 # Date 08/11/2025
 # Github : https://github.com/trmxvibs
 # Author : Lokesh kumar
+# File: core/tool_data.py
 
 # This file contains the structured data for all tools to be included in the Tool-X Installer.
 
