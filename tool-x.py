@@ -3,22 +3,28 @@
 # Date 08/11/2025
 # Github : https://github.com/trmxvibs
 # Author : Lokesh kumar
+# File: tool-x.py
 import os
 import sys
-current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(current_dir)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+
+os.chdir(script_dir)
+
 from time import sleep as timeout
 from colorama import Fore, Style, init
 
 # Initialize colorama
 init(autoreset=True) 
 
-# --- Import and Setup Checks ---
+# --- Import Core Modules ---
+# Check for core file existence after changing directory
 if not os.path.exists('core/tool_data.py'):
     print(Fore.RED + "[!] ERROR: 'core/tool_data.py' not found." + Style.RESET_ALL)
+    print(Fore.YELLOW + "    Please ensure the file structure is correct (core/tool_data.py exists)." + Style.RESET_ALL)
     sys.exit(1)
 
-# Import data and logic from core files
+# Now perform the imports
 from core.tool_data import TOOLS, TOOL_CATEGORIES
 from core.installation_logic import install_github_tool, install_termux_package, LOG_FILE, INSTALLED_TOOLS_FILE
 
@@ -181,7 +187,7 @@ def uninstall_tool_menu():
     installed_map = {}
     
     banner()
-    print(Fore.RED + "---  Uninstall Installed Tools ---" + Style.RESET_ALL)
+    print(Fore.RED + "--- 🗑️ Uninstall Installed Tools ---" + Style.RESET_ALL)
     
     for idx, line in enumerate(lines):
         try:
@@ -277,7 +283,16 @@ def submenu(category_id):
     
     for tool_id, data in category_tools.items():
         formatted_id = str(tool_id).zfill(2)
-        print(f"    {Fore.GREEN}[{formatted_id}]{Style.RESET_ALL} {data['name']}: {data['desc']}")
+        tool_name = data['name']
+        tool_desc = data['desc']
+        help_cmd = data.get('help_cmd', '')
+        
+        if help_cmd:
+            display_cmd = f" | RUN: {Fore.YELLOW}{help_cmd.split()[0]}...{Style.RESET_ALL}"
+        else:
+            display_cmd = ""
+            
+        print(f"    {Fore.GREEN}[{formatted_id}]{Style.RESET_ALL} {tool_name}: {tool_desc}{display_cmd}")
     
     print(Fore.YELLOW + "\n    [00] Back to main menu\n" + Style.RESET_ALL)
     
