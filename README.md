@@ -31,6 +31,8 @@ Tool-X is an installation and management framework designed to turn a Termux env
 - Termux-specific fixes (gem issues, Python library patches, CWD errors) included.
 
 - Management utilities: search engine, status dashboard, selective uninstall, and self-update.
+- ![Made in India](https://img.shields.io/badge/Made%20in-India-FF9933?style=for-the-badge&logo=india&logoColor=white)
+
 
 ## Installtion 
 - **Copy Command and paste in terminal**
