@@ -3,7 +3,7 @@
 ## The Apex Termux Installation Framework
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/trmxvibs/Tool-X?style=for-the-badge&color=ffd300" alt="GitHub Stars">
+<img src="https://img.shields.io/github/stars/trmxvibs/Tool-X?style=for-the-badge&color=FFD300" alt="GitHub Stars">
   <img src="https://img.shields.io/github/forks/trmxvibs/Tool-X?style=for-the-badge&color=blueviolet" alt="GitHub Forks">
   <img src="https://img.shields.io/github/last-commit/trmxvibs/Tool-X?style=for-the-badge&color=9cf" alt="Last Commit">
   <img src="https://img.shields.io/badge/Status-ACTIVE-brightgreen?style=for-the-badge" alt="Project Status">
@@ -13,11 +13,11 @@
   <img src="https://img.shields.io/badge/Tested%20On-Termux%20%7C%20Kali%20Nethunter-orange?style=flat&logo=android" alt="Tested On">
   <img src="https://img.shields.io/badge/Language-Python%203.x%20%7C%20Shell-blue?style=flat&logo=python" alt="Language">
   <img src="https://img.shields.io/badge/License-MIT-blue?style=flat" alt="License">
-</p>
+
 
 
 [![ShellCheck](https://github.com/trmxvibs/Tool-X/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/trmxvibs/Tool-X/actions/workflows/shellcheck.yml)
-
+</p>
 
 ---
 ## Overview
@@ -59,6 +59,11 @@ After restarting Termux, start the framework from any directory with:
  - [98] Clean Uninstall — Remove tracked tool directories selectively.
 
 - [96] Self-Destruct — Remove the entire ~/tool-x directory and the global toolx alias.
+
+ <a href="https://www.youtube.com/@termux2" target="_blank">
+  <img src="https://img.shields.io/badge/YouTube-termux2-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
+</a>
+
 
 # Screenshot
 <img width="722" height="648" alt="image" src="https://github.com/user-attachments/assets/c431f56f-c68c-4be0-a37a-76af323cb9f8" />
