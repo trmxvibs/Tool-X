@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: "0 0 * * *"   # Runs daily at midnight UTC
   workflow_dispatch:      # Allow manual runs
+permissions:
+      contents: write
 
 jobs:
   update-badge:
