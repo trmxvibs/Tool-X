@@ -16,6 +16,8 @@ jobs:
   update-file:
     # Use a standard runner environment
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     # Define the steps for this job
     steps:
