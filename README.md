@@ -38,7 +38,7 @@ Tool-X is an installation and management framework designed to turn a Termux env
 - **Copy Command and paste in terminal**
 
   ```python
-  pkg install git wget -y && wget https://raw.githubusercontent.com/trmxvibs/Tool-X/main/setup.sh -O setup.sh && chmod +x setup.sh && ./setup.sh
+  pkg up -y && pkg install -y git wget which && wget https://raw.githubusercontent.com/trmxvibs/Tool-X/main/setup.sh -O setup.sh && chmod +x setup.sh && ./setup.sh
   ```
   ## Note: Restart your Termux session after the script finishes to apply the toolx alias and environment changes.
   
