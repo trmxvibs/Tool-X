@@ -4,7 +4,6 @@
 
 <p align="center">
 <img src="https://img.shields.io/github/stars/trmxvibs/Tool-X?style=for-the-badge&color=FFD300" alt="GitHub Stars">
-  <img src="https://img.shields.io/github/forks/trmxvibs/Tool-X?style=for-the-badge&color=blueviolet" alt="GitHub Forks">
   <img src="https://img.shields.io/github/last-commit/trmxvibs/Tool-X?style=for-the-badge&color=9cf" alt="Last Commit">
   <img src="https://img.shields.io/badge/Status-ACTIVE-brightgreen?style=for-the-badge" alt="Project Status">
 </p>
