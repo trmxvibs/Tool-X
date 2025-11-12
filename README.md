@@ -95,7 +95,7 @@ A: Run toolx and choose [94] View Status to examine logs. Common causes are netw
 
 Official repo: https://github.com/trmxvibs/Tool-X
 
-![Last Updated](https://img.shields.io/date/1731369600?label=Last%20Update&color=orange)
+![Last Updated](https://img.shields.io/date/1762912989?label=Last%20Updatehttps://img.shields.io/date/1731369600?label=Last%20Update&color=orangecolor=orange)
 
 **Last updated on:** November 11, 2025
 
