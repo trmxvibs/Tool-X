@@ -1,161 +1,130 @@
 # File: core/installation_logic.py
-# Date : 08/11/2025
-# Github : https://github.com/trmxvibs
-# Author : Lokesh kumar
-# File: core/installation_logic.py
+# Update: 19/02/2026
 import os
 import time
-import sys
-from colorama import Fore, Style, init
+import subprocess
+import shutil
+import platform
+from rich.console import Console
+from rich.progress import Progress, SpinnerColumn, TextColumn
+from rich.panel import Panel
+from rich.text import Text
 
-# Initialize colorama
-init(autoreset=True)
+# Import tool definitions
+from core.tool_data import TOOLS
 
-# Import tool definitions and data
-from core.tool_data import TOOLS 
+HOME_DIR = os.path.expanduser("~")
+LOG_FILE = os.path.join(HOME_DIR, "tool-x_error.log")
+INSTALLED_TOOLS_FILE = os.path.join(HOME_DIR, "tool-x_installed.json")
 
-# Define log file path and track installed tools
-LOG_FILE = os.path.expanduser("~/tool-x_error.log")
-INSTALLED_TOOLS_FILE = os.path.expanduser("~/tool-x_installed.txt")
+console = Console()
 
-# --- Logging & Tracking Utilities ---
+def run_command(command, description, cwd=None):
+    """Runs shell commands with a loading spinner."""
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        transient=True,
+    ) as progress:
+        progress.add_task(description=description, total=None)
+        try:
+            result = subprocess.run(
+                command, shell=True, cwd=cwd, capture_output=True, text=True
+            )
+            if result.returncode != 0:
+                timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+                with open(LOG_FILE, "a", encoding='utf-8') as f:
+                    f.write(f"\n[{timestamp}] FAILED: {command}\nERROR: {result.stderr}\n")
+                return False, result.stderr
+            return True, result.stdout
+        except Exception as e:
+            return False, str(e)
 
-def log_error(message):
-    """Writes an error message to the log file."""
-    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOG_FILE, "a") as f:
-        f.write(f"[{timestamp}] ERROR: {message}\n")
-
-def track_installed_tool(tool_name, tool_dir):
-    """Adds a newly installed tool and its path to the tracking file."""
-    with open(INSTALLED_TOOLS_FILE, "a") as f:
-        f.write(f"{tool_name}:{tool_dir}\n")
-
-# --- Installation Utilities ---
-
-def check_package_manager(pkg_manager):
-    """Ensures pip, npm, or go is installed if required."""
-    if pkg_manager == "python" or pkg_manager == "pip":
-        install_termux_package("python")
-        os.system("pip install --upgrade pip > /dev/null 2>&1")
-    elif pkg_manager == "nodejs" or pkg_manager == "npm":
-        install_termux_package("nodejs")
-    elif pkg_manager == "go":
-        install_termux_package("golang")
-
-def display_tool_help(tool_name, tool_dir, help_cmd):
-    """Displays instructions on how to run the installed tool."""
-    print(Fore.BLUE + Style.BRIGHT + "\n\n--- 🚀 EXECUTION GUIDE ---" + Style.RESET_ALL)
-    print(Fore.WHITE + f"Tool Name: {tool_name}")
-    print(Fore.WHITE + f"Installation Path: ~/{os.path.basename(tool_dir)}")
+def check_dependencies(reqs):
+    """Installs required packages automatically (Smart Check)."""
+    if not reqs: return True
     
-    if help_cmd:
-        print(Fore.CYAN + "\n[1] To RUN the tool, first change directory:" + Style.RESET_ALL)
-        print(Fore.YELLOW + f"    cd {os.path.basename(tool_dir)}" + Style.RESET_ALL)
-        print(Fore.CYAN + "\n[2] Then, check the help menu using the command:" + Style.RESET_ALL)
-        print(Fore.GREEN + Style.BRIGHT + f"    {help_cmd}" + Style.RESET_ALL)
-    else:
-        print(Fore.YELLOW + "\n[!] Execution command not specified in tool data." + Style.RESET_ALL)
-        print(Fore.YELLOW + "    Please 'cd' into the directory and check the README file." + Style.RESET_ALL)
-    print(Fore.BLUE + "-----------------------------" + Style.RESET_ALL)
-    time.sleep(2)
-
-
-def handle_post_install(tool_name, tool_dir, help_cmd):
-    """Asks the user whether to open the installed tool's directory, then displays help."""
+    # Clean up requirements string
+    req_list = reqs.replace(',', ' ').split()
     
-    print(Fore.CYAN + Style.BRIGHT + "\n[?] Installation finished.")
-    
-    if os.path.isdir(tool_dir):
-        track_installed_tool(tool_name, tool_dir) # Track successfully installed tool
+    for pkg in req_list:
+        pkg = pkg.strip()
+        if not pkg: continue
         
-        # Display help before asking to open
-        display_tool_help(tool_name, tool_dir, help_cmd)
+        # 'bash' is built-in mostly, skip to save time
+        if pkg == "bash": continue
 
-        choice = input(Fore.YELLOW + f"[?] Do you want to open the tool folder ({os.path.basename(tool_dir)}) now? (y/n): " + Style.RESET_ALL).strip().lower()
+        # Check if already installed
+        if shutil.which(pkg): continue
         
-        if choice == 'y':
-            print(Fore.GREEN + f"[*] Opening directory: {tool_dir}")
-            os.execlp("bash", "bash", "-c", f"cd {tool_dir} && exec bash")
-
-    # If the user says no, the function returns. The main script handles the restart.
-    print(Fore.WHITE + "[*] Returning to the main menu...")
-    time.sleep(1) 
-    return
-
-
-def install_termux_package(package_name):
-    """Installs an APT-based package."""
-    print(Fore.CYAN + f"\n[+] Installing Termux package: {package_name}...")
-    
-    # Update and install
-    os.system("pkg update -y") 
-    install_status = os.system(f"pkg install {package_name} -y")
-    
-    if install_status != 0:
-        log_error(f"Failed to install package: {package_name}. Exit code: {install_status}")
-        print(Fore.RED + f"[!] ERROR: Failed to install package {package_name}. Check {LOG_FILE}" + Style.RESET_ALL)
-    else:
-        print(Fore.GREEN + f"[+] {package_name} installed successfully.")
-    
-    time.sleep(1)
-
+        console.print(f"[dim]Installing dependency: {pkg}...[/]")
+        
+        # Installation command based on OS
+        if platform.system() == "Windows":
+             console.print(f"[yellow]Skipping auto-install for '{pkg}' on Windows (Install manually).[/]")
+             continue
+        else:
+             install_cmd = f"pkg install -y {pkg}"
+        
+        success, _ = run_command(install_cmd, f"Installing {pkg}...")
+        if not success:
+            console.print(f"[bold red]Failed to install dependency: {pkg}[/]")
+            return False
+    return True
 
 def install_github_tool(tool_id, category_id):
-    """Clones and installs a tool from its GitHub repository based on ID."""
-    
-    tool_data = TOOLS.get(category_id, {}).get(tool_id, {})
-    if not tool_data:
-        print(Fore.RED + f"\nERROR: Tool ID {tool_id} not found." + Style.RESET_ALL)
+    """Main installation logic."""
+    try:
+        tool_data = TOOLS[category_id][tool_id]
+    except KeyError:
+        console.print("[bold red]Error: Tool ID not found.[/]")
         return
 
     tool_name = tool_data["name"]
     repo_url = tool_data["repo"]
-    req_packages = tool_data.get("reqs", "")
-    install_command = tool_data.get("install_cmd", "")
-    help_cmd = tool_data.get("help_cmd", "") # Get help command
-    
-    # Sanitized directory name
-    tool_dir_name = tool_name.replace(' ', '_').replace('/', '_').replace('-', '_').replace('.', '_')
-    tool_dir = os.path.expanduser(f"~/{tool_dir_name}")
+    safe_name = tool_name.replace(" ", "_").replace("/", "_")
+    install_dir = os.path.join(HOME_DIR, safe_name)
 
-    # 1. Install required dependencies and check package managers
-    install_termux_package("git") # Ensure git is available
-    if req_packages:
-        print(Fore.YELLOW + f"[*] Installing dependencies: {req_packages}")
-        for pkg in req_packages.split():
-            # Check package manager dependencies (pip, npm, go)
-            check_package_manager(pkg)
-            # Install other dependencies
-            if pkg not in ["python", "nodejs", "go", "pip", "npm"]:
-                install_termux_package(pkg)
+    # 1. Check Dependencies
+    if not check_dependencies(tool_data.get("reqs", "")): return
 
-    # 2. Clone the repository
-    print(Fore.CYAN + f"\n[+] Cloning {tool_name} from GitHub...")
-    if os.path.exists(tool_dir):
-        print(Fore.YELLOW + f"[*] Directory {tool_dir_name} already exists. Skipping cloning.")
+    # 2. Clone/Update
+    if os.path.exists(install_dir):
+        cmd, desc = f"git -C {install_dir} pull", f"Updating {tool_name}..."
     else:
-        clone_status = os.system(f"git clone {repo_url} {tool_dir}")
-        if clone_status != 0:
-             log_error(f"Failed to clone {tool_name} ({repo_url}).")
-             print(Fore.RED + f"[!] ERROR: Failed to clone {tool_name}. Check {LOG_FILE}" + Style.RESET_ALL)
-             return
+        cmd, desc = f"git clone {repo_url} {install_dir}", f"Cloning {tool_name}..."
 
-    # 3. Apply execute permissions (Crucial for shell scripts)
-    os.system(f"chmod -R 777 {tool_dir}")
+    success, _ = run_command(cmd, desc)
+    if not success:
+        console.print(f"[bold red]Installation Failed![/] Check {LOG_FILE}")
+        return
 
-    # 4. Run custom installation command
-    if install_command:
-        print(Fore.CYAN + f"[*] Running custom installation steps for {tool_name}...")
-        install_status = os.system(f"cd {tool_dir} && {install_command}")
-        if install_status != 0:
-             log_error(f"Failed to run install command for {tool_name}.")
-             print(Fore.RED + f"[!] ERROR: Custom install failed for {tool_name}. Check {LOG_FILE}" + Style.RESET_ALL)
-             return
+    # 3. Post Install (Permissions)
+    run_command(f"chmod -R 777 {install_dir}", "Fixing permissions...")
     
-    # 5. Handle post installation prompt and display help
-    handle_post_install(tool_name, tool_dir, help_cmd)
+    # 4. Success Message
+    # If help_cmd is just 'ls', we give a generic helpful message
+    help_cmd = tool_data.get('help_cmd', 'ls')
+    if help_cmd == "ls":
+        run_msg = f"cd {safe_name} && ls"
+        hint = "(Check README.md inside the folder)"
+    else:
+        run_msg = f"cd {safe_name} && {help_cmd}"
+        hint = ""
 
-# --- Define what is exported ---
-
-__all__ = ['install_github_tool', 'install_termux_package', 'LOG_FILE', 'INSTALLED_TOOLS_FILE']
+    msg = Text()
+    msg.append(f"✅ {tool_name} Installed Successfully!\n", style="bold green")
+    msg.append(f"📂 Location: {install_dir}\n", style="cyan")
+    msg.append(f"🚀 To Start:\n", style="yellow")
+    msg.append(f"   {run_msg}\n", style="bold white")
+    if hint:
+        msg.append(f"   {hint}", style="dim")
+    
+    console.print(Panel(msg, title="Success", border_style="green"))
+    
+    # Update Installed History
+    try:
+        with open(INSTALLED_TOOLS_FILE, "a", encoding='utf-8') as f:
+            f.write(f"{tool_name}|{install_dir}\n")
+    except:
+        pass 
