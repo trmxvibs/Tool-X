@@ -4,18 +4,12 @@
 ![Forks](https://img.shields.io/github/forks/trmxvibs/Tool-X?style=for-the-badge&color=ff8800&logo=github)
 ![Issues](https://img.shields.io/github/issues/trmxvibs/Tool-X?style=for-the-badge&color=ff4444&logo=github)
 ![License](https://img.shields.io/github/license/trmxvibs/Tool-X?style=for-the-badge&color=00c853)
-![Repo Size](https://img.shields.io/github/repo-size/trmxvibs/Tool-X?style=for-the-badge&color=2962ff)
-![Last Commit](https://img.shields.io/github/last-commit/trmxvibs/Tool-X?style=for-the-badge&color=7b1fa2)
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Tools Count](https://img.shields.io/badge/Tools-280%2B-brightgreen?style=for-the-badge)
 ![Framework](https://img.shields.io/badge/Framework-Advanced-00bcd4?style=for-the-badge)
-![CLI](https://img.shields.io/badge/Interface-CLI-000000?style=for-the-badge)
-![UI](https://img.shields.io/badge/UI-Rich%20Console-9c27b0?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Linux%20%7C%20Android-4caf50?style=for-the-badge)
-![Performance](https://img.shields.io/badge/Performance-Optimized-ff5722?style=for-the-badge)
 ![Maintenance](https://img.shields.io/badge/Maintained-Active-2e7d32?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Stable-1de9b6?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-2.1-00e676?style=for-the-badge)
 
 ---
 
