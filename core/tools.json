@@ -1,0 +1,2540 @@
+{
+    "categories": {
+        "01": "OSINT & Information Retrieval",
+        "02": "Social Engineering & Phishing",
+        "03": "Bruteforce & Password Attacks",
+        "04": "Stress Testing & Spamming Tools",
+        "05": "Linux & Desktop Installation",
+        "06": "Termux Utilities & Add-ons",
+        "07": "All-in-One Hacking Frameworks"
+    },
+    "tools": {
+        "02": {
+            "01": {
+                "name": "seeker",
+                "desc": "Accurately Locate Smartphones using Social Engineering.->",
+                "repo": "https://github.com/thewhiteh4t/seeker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "02": {
+                "name": "LITESPAM",
+                "desc": "Berisi Tools Spammer Dengan Berbagai Macam jenis Dengan Limit Tinggi Bahkan Unlimited.->",
+                "repo": "https://github.com/4L13199/LITESPAM",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "03": {
+                "name": "BeeLogger",
+                "desc": "Generate Gmail Emailing Keyloggers to Windows..->",
+                "repo": "https://github.com/4w4k3/BeeLogger",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "04": {
+                "name": "Umbrella",
+                "desc": "A Phishing Dropper designed to Pentest..->",
+                "repo": "https://github.com/macfuse/macfuse",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "05": {
+                "name": "Dr0p1t-Framework",
+                "desc": "A framework that create an advanced stealthy dropper that bypass most AVs and have a lot of tricks.->",
+                "repo": "https://github.com/D4Vinci/Dr0p1t-Framework",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "06": {
+                "name": "spamchat",
+                "desc": "Spam Chat Facebook.->",
+                "repo": "https://github.com/errorBrain/spamchat",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "07": {
+                "name": "weeman",
+                "desc": "HTTP server for phishing in python.->",
+                "repo": "https://github.com/evait-security/weeman",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "08": {
+                "name": "FaDe",
+                "desc": "Fake Deface.->",
+                "repo": "https://github.com/facebookresearch/FaderNetworks",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "09": {
+                "name": "evilginx",
+                "desc": "Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication.->",
+                "repo": "https://github.com/kgretzky/evilginx2",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "10": {
+                "name": "evilginx2",
+                "desc": "Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication.->",
+                "repo": "https://github.com/kgretzky/evilginx2",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "11": {
+                "name": "Spammer-Grab",
+                "desc": "A brand new, awakened version of the old Spammer-Grab..->",
+                "repo": "https://github.com/OraqleFarm/Spammer-Grab",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "12": {
+                "name": "FakeImageExploiter",
+                "desc": "Use a Fake image.jpg to exploit targets (hide known file extensions).->",
+                "repo": "https://github.com/r00t-3xp10it/FakeImageExploiter",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "13": {
+                "name": "catphish",
+                "desc": "CATPHISH project - For phishing and corporate espionage. Perfect for RED TEAM. .->",
+                "repo": "https://github.com/ring0lab/catphish",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "14": {
+                "name": "ghost-phisher",
+                "desc": "Automatically exported from code.google.com/p/ghost-phisher.->",
+                "repo": "https://github.com/savio-code/ghost-phisher",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "15": {
+                "name": "social-engineer-toolkit",
+                "desc": "The Social-Engineer Toolkit (SET) repository from TrustedSec - All new versions of SET will be deployed here..->",
+                "repo": "https://github.com/trustedsec/social-engineer-toolkit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "16": {
+                "name": "SocialBox",
+                "desc": "SocialBox is a Bruteforce Attack Framework [ Facebook , Gmail , Instagram ,Twitter ] , Coded By Belahsan Ouerghi.->",
+                "repo": "https://github.com/Cyb0r9/SocialBox",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "17": {
+                "name": "PiDense",
+                "desc": "\ud83c\udf53\ud83d\udce1\ud83c\udf4dMonitor illegal wireless network activities. (Fake Access Points), (WiFi Threats: KARMA Attacks, WiFi Pineapple, Similar SSID, OPN Network Density etc.).->",
+                "repo": "https://github.com/WiPi-Hunter/PiDense",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            }
+        },
+        "05": {
+            "01": {
+                "name": "ANDRAX",
+                "desc": "ANDRAX is a Penetration Testing platform developed specifically for Android smartphones, ANDRAX has the ability to run natively on Android so it behaves like a common Linux distribution, But more powerful than a common distribution->",
+                "repo": "https://github.com/laudarch/ANDRAX-Mobile-Pentest",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "02": {
+                "name": "bleachbit",
+                "desc": "BleachBit system cleaner for Windows and Linux.->",
+                "repo": "https://github.com/bleachbit/bleachbit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "03": {
+                "name": "GoogleSearch-CLI",
+                "desc": "Search anything on Google without captcha.->",
+                "repo": "https://github.com/BroNils/GoogleSearch-CLI",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "04": {
+                "name": "BinGoo",
+                "desc": "BinGoo! A Linux bash based Bing and Google Dorking Tool.->",
+                "repo": "https://github.com/Hood3dRob1n/BinGoo",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "05": {
+                "name": "osrframework",
+                "desc": "OSRFramework, the Open Sources Research Framework is a AGPLv3+ project by i3visio focused on providing API and tools to perform more accurate online researches..->",
+                "repo": "https://github.com/BakarRoti/osrframework",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "06": {
+                "name": "termux-ubuntu",
+                "desc": "Ubuntu chroot on termux.->",
+                "repo": "https://github.com/MFDGaming/ubuntu-in-termux",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "07": {
+                "name": "EggShell",
+                "desc": "iOS/macOS/Linux Remote Administration Tool.->",
+                "repo": "https://github.com/lucasjacks0n/EggShell",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "08": {
+                "name": "enum4linux",
+                "desc": "enum4Linux is a Linux alternative to enum.exe for enumerating data from Windows and Samba hosts..->",
+                "repo": "https://github.com/CiscoCXSecurity/enum4linux",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "09": {
+                "name": "trojanizer",
+                "desc": "Trojanize your payload - WinRAR (SFX) automatization - under Linux distros.->",
+                "repo": "https://github.com/r00t-3xp10it/trojanizer",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "10": {
+                "name": "ExploitOnCLI",
+                "desc": "Trying to be the best tool to search for exploits in the terminal..->",
+                "repo": "https://github.com/Exploit-install/ExploitOnCLI",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "11": {
+                "name": "MyServer",
+                "desc": "MyServer is your own localhost web server. you can setup PHP, Apache, Nginx and MySQL servers on your android devices or linux like Ubuntu etc. MyServer is Developed for android terminal like Termux or GNURoot Debian terminal..->",
+                "repo": "https://github.com/rajkumardusad/MyServer",
+                "reqs": "php",
+                "help_cmd": "ls"
+            },
+            "12": {
+                "name": "Tool-X",
+                "desc": "Tool-X is a kali linux hacking Tool installer. Tool-X developed for termux and other android terminals. using Tool-X you can install almost 370+ hacking tools in termux app and other linux based distributions..->",
+                "repo": "https://github.com/vaginessa/Tool-X",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "13": {
+                "name": "killerbee",
+                "desc": "IEEE 802.15.4/ZigBee Security Research Toolkit.->",
+                "repo": "https://github.com/riverloopsec/killerbee",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "14": {
+                "name": "Vegile",
+                "desc": "This tool will setting up your backdoor/rootkits when backdoor already setup it will be hidden your spesisifc process,unlimited your session in metasploit and transparent. Even when it killed, it will re-run again. There always be a procces which while run another process,So we can assume that this procces is unstopable like a Ghost in The Shell.->",
+                "repo": "https://github.com/screetsec/Vegile",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "15": {
+                "name": "kalibrate-rtl",
+                "desc": "fork of http://thre.at/kalibrate/ for use with rtl-sdr devices.->",
+                "repo": "https://github.com/steve-m/kalibrate-rtl",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "16": {
+                "name": "Gloom-Framework",
+                "desc": "Gloom-Framework :: Linux Penetration Testing Framework.->",
+                "repo": "https://github.com/StreetSec/Gloom-Framework",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "17": {
+                "name": "hacktronian",
+                "desc": "All in One Hacking Tool for Linux & Android.->",
+                "repo": "https://github.com/thehackingsage/hacktronian",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "18": {
+                "name": "EagleEye",
+                "desc": "Stalk your Friends. Find their Instagram, FB and Twitter Profiles using Image Recognition and Reverse Image Search..->",
+                "repo": "https://github.com/ThoughtfulDev/EagleEye",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "19": {
+                "name": "fbvid",
+                "desc": "Facebook Video Downloader (CLI) For Linux Systems Coded in PHP.->",
+                "repo": "https://github.com/Tuhinshubhra/fbvid",
+                "reqs": "php",
+                "help_cmd": "ls"
+            },
+            "20": {
+                "name": "Termux-Kali",
+                "desc": "Termux-Kali - Install Kali Linux on Android using Termux!.->]([->",
+                "repo": "https://github.com/MasterDevX/Termux-Kali",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            }
+        },
+        "07": {
+            "01": {
+                "name": "findomain",
+                "desc": "The fastest and cross-platform subdomain enumerator, don't waste your time.->",
+                "repo": "https://github.com/Findomain/Findomain",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "02": {
+                "name": "Findsploit",
+                "desc": "Find exploits in local and online databases instantly.->",
+                "repo": "https://github.com/1N3/Findsploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "03": {
+                "name": "ReverseAPK",
+                "desc": "Quickly analyze and reverse engineer Android packages.->",
+                "repo": "https://github.com/1N3/ReverseAPK",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "04": {
+                "name": "Sn1per",
+                "desc": "Automated pentest framework for offensive security experts.->",
+                "repo": "https://github.com/1N3/Sn1per",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "05": {
+                "name": "noisy",
+                "desc": "Simple random DNS, HTTP/S internet traffic noise generator.->",
+                "repo": "https://github.com/1tayH/noisy",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "06": {
+                "name": "hakkuframework",
+                "desc": "Hakku Framework penetration testing.->",
+                "repo": "https://github.com/4shadoww/hakkuframework",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "07": {
+                "name": "KnockMail",
+                "desc": "Verify if email exists.->",
+                "repo": "https://github.com/4w4k3/KnockMail",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "08": {
+                "name": "mfterm",
+                "desc": "Terminal for working with Mifare Classic 1-4k Tags.->",
+                "repo": "https://github.com/4ZM/mfterm",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "09": {
+                "name": "doork",
+                "desc": "Passive Vulnerability Auditor.->",
+                "repo": "https://github.com/doorkeeper-gem/doorkeeper",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "10": {
+                "name": "netdiscover",
+                "desc": "netdiscover.->",
+                "repo": "https://github.com/alexxy/netdiscover",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "11": {
+                "name": "roxysploit",
+                "desc": "A Hackers framework.->",
+                "repo": "https://github.com/andyvaikunth/roxysploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "12": {
+                "name": "Hunner",
+                "desc": "Hacking framework.->",
+                "repo": "https://github.com/b3-v3r/Hunner",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "13": {
+                "name": "beef",
+                "desc": "The Browser Exploitation Framework Project.->",
+                "repo": "https://github.com/beefproject/beef",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "14": {
+                "name": "gcat",
+                "desc": "A PoC backdoor that uses Gmail as a C&C server.->",
+                "repo": "https://github.com/byt3bl33d3r/gcat",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "15": {
+                "name": "AUXILE",
+                "desc": "Auxile Framework.->",
+                "repo": "https://github.com/AvivNavon/AuxiLearn",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "16": {
+                "name": "rdpy",
+                "desc": "Remote Desktop Protocol in Twisted Python.->",
+                "repo": "https://github.com/citronneur/rdpy",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "17": {
+                "name": "cuckoo",
+                "desc": "Cuckoo Sandbox is an automated dynamic malware analysis system.->",
+                "repo": "https://github.com/cuckoosandbox/cuckoo",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "18": {
+                "name": "Ecode",
+                "desc": "Encode / Decode.->",
+                "repo": "https://github.com/SpartanJ/ecode",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "19": {
+                "name": "secHub",
+                "desc": "Python Security/Hacking Kit.->",
+                "repo": "https://github.com/mercedes-benz/sechub",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "20": {
+                "name": "Intersect-2.5",
+                "desc": "Post-Exploitation Framework.->",
+                "repo": "https://github.com/BMC-Intersectional-Data-Feminism/dsci-b215-intersectional-data-feminism-spring-2025-exercise5-Exercise5-Viz",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "21": {
+                "name": "CeWL",
+                "desc": "CeWL is a Custom Word List Generator.->",
+                "repo": "https://github.com/digininja/CeWL",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "22": {
+                "name": "Empire",
+                "desc": "Empire is a PowerShell and Python post-exploitation agent..->",
+                "repo": "https://github.com/EmpireProject/Empire",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "23": {
+                "name": "wafw00f",
+                "desc": "WAFW00F allows one to identify and fingerprint Web Application Firewall (WAF) products protecting a website..->",
+                "repo": "https://github.com/EnableSecurity/wafw00f",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "24": {
+                "name": "BAF",
+                "desc": "Blind Attacking Framework.->",
+                "repo": "https://github.com/antiguab/BAFluidView",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "25": {
+                "name": "weevely3",
+                "desc": "Weaponized web shell.->",
+                "repo": "https://github.com/epinna/weevely3",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "26": {
+                "name": "dedsploit",
+                "desc": "Network protocol auditing framework.->",
+                "repo": "https://github.com/cys3c/dedsploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "27": {
+                "name": "fluxion",
+                "desc": "Fluxion is a remake of linset by vk496 with less bugs and enhanced functionality..->",
+                "repo": "https://github.com/FluxionNetwork/fluxion",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "28": {
+                "name": "hURL",
+                "desc": "hexadecimal & URL encoder + decoder.->",
+                "repo": "https://github.com/Orange-OpenSource/hurl",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "29": {
+                "name": "msfpc",
+                "desc": "MSFvenom Payload Creator (MSFPC).->",
+                "repo": "https://github.com/g0tmi1k/msfpc",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "30": {
+                "name": "SpazSMS",
+                "desc": "Send unsolicited messages repeatedly on the same phone number.->",
+                "repo": "https://github.com/WORXKiT/SpazSMS",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "31": {
+                "name": "distorm",
+                "desc": "Powerful Disassembler Library For x86/AMD64.->",
+                "repo": "https://github.com/gdabah/distorm",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "32": {
+                "name": "indonesian-wordlist",
+                "desc": "Indonesian wordlist.->",
+                "repo": "https://github.com/geovedi/indonesian-wordlist",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "33": {
+                "name": "dbd",
+                "desc": "Durandal's Backdoor.->",
+                "repo": "https://github.com/dbukowski/DBDebugToolkit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "34": {
+                "name": "golismero",
+                "desc": "GoLismero - The Web Knife.->",
+                "repo": "https://github.com/golismero/golismero",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "35": {
+                "name": "webdav",
+                "desc": "Simple Go WebDAV server..->",
+                "repo": "https://github.com/hacdias/webdav",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "36": {
+                "name": "maskprocessor",
+                "desc": "High-Performance word generator with a per-position configureable charset.->",
+                "repo": "https://github.com/hashcat/maskprocessor",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "37": {
+                "name": "faraday",
+                "desc": "Collaborative Penetration Test and Vulnerability Management Platform.->",
+                "repo": "https://github.com/lostisland/faraday",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "38": {
+                "name": "keimpx",
+                "desc": "Check for valid credentials across a network over SMB.->",
+                "repo": "https://github.com/nccgroup/keimpx",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "39": {
+                "name": "sslyze",
+                "desc": "Current development of SSLyze now takes place on a separate repository.->",
+                "repo": "https://github.com/nabla-c0d3/sslyze",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "40": {
+                "name": "kickthemout",
+                "desc": "\ud83d\udca4 Kick devices off your network by performing an ARP Spoof attack..->",
+                "repo": "https://github.com/k4m4/kickthemout",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "41": {
+                "name": "onioff",
+                "desc": "\ud83c\udf30 An onion url inspector for inspecting deep web links..->",
+                "repo": "https://github.com/k4m4/onioff",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "42": {
+                "name": "pybluez",
+                "desc": "Bluetooth Python extension module.->",
+                "repo": "https://github.com/pybluez/pybluez",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "43": {
+                "name": "httptunnel",
+                "desc": "Bidirectional data stream tunnelled in HTTP requests..->",
+                "repo": "https://github.com/larsbrinkhoff/httptunnel",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "44": {
+                "name": "Responder",
+                "desc": "Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting NTLMv1/NTLMv2/LMv2, Extended Security NTLMSSP and Basic HTTP authentication. .->",
+                "repo": "https://github.com/SpiderLabs/Responder",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "45": {
+                "name": "credmap",
+                "desc": "The Credential Mapper.->",
+                "repo": "https://github.com/lightos/credmap",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "46": {
+                "name": "xerosploit",
+                "desc": "Efficient and advanced man in the middle framework.->",
+                "repo": "https://github.com/LionSec/xerosploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "47": {
+                "name": "xsmash",
+                "desc": "Facebook Hack Box .->",
+                "repo": "https://github.com/ks27/xsmash",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "48": {
+                "name": "zeroeye",
+                "desc": "Key Generator v1.66.->",
+                "repo": "https://github.com/ImCoriander/ZeroEye",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "49": {
+                "name": "Xshell",
+                "desc": "~ Shell Finder By \u24c2 \u24b6 \u24c3 \u24be \u24c8 \u24c8 \u24c4 \u262a ~.->",
+                "repo": "https://github.com/netsarang/Xshell-ColorScheme",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "50": {
+                "name": "nk26",
+                "desc": "NKosec Encode, 2 side encode. change alphabet to numeric or back numeric to alphabet..->",
+                "repo": "https://github.com/milio48/nk26",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "51": {
+                "name": "mitmproxy",
+                "desc": "An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers..->",
+                "repo": "https://github.com/mitmproxy/mitmproxy",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "52": {
+                "name": "xspy",
+                "desc": "Record X11 keypress events to a log file.->",
+                "repo": "https://github.com/yodamaster/xspy",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "53": {
+                "name": "creddump",
+                "desc": "Automatically exported from code.google.com/p/creddump.->",
+                "repo": "https://github.com/CiscoCXSecurity/creddump7",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "54": {
+                "name": "BadMod",
+                "desc": "CMS auto detect and exploit..->",
+                "repo": "https://github.com/shakenetwork/BadMod",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "55": {
+                "name": "braa",
+                "desc": "Ultra-fast SNMPv1/v2 stack. Get/set/walk tens of thousands of hosts at once..->",
+                "repo": "https://github.com/camaramm/tennessee-eastman-profBraatz",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "56": {
+                "name": "Winpayloads",
+                "desc": "Undetectable Windows Payload Generation.->",
+                "repo": "https://github.com/nccgroup/Winpayloads",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "57": {
+                "name": "AutoSploit",
+                "desc": "Automated Mass Exploiter.->",
+                "repo": "https://github.com/NullArray/AutoSploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "58": {
+                "name": "exploitdb",
+                "desc": "The official Exploit Database repository.->",
+                "repo": "https://github.com/offensive-security/exploitdb",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "59": {
+                "name": "Simple-Fuzzer",
+                "desc": "Simple Fuzzer is a simple config-file driven block/mutation based fuzzing system.->",
+                "repo": "https://github.com/waleedassar/SimpleNTSyscallFuzzer",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "60": {
+                "name": "OWASP-WebScarab",
+                "desc": "OWASP WebScarab.->",
+                "repo": "https://github.com/OWASP/OWASP-WebScarab",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "61": {
+                "name": "KatanaFramework",
+                "desc": "The New Hacking Framework.->",
+                "repo": "https://github.com/PowerScript/KatanaFramework",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "62": {
+                "name": "PowerSploit",
+                "desc": "PowerSploit - A PowerShell Post-Exploitation Framework.->",
+                "repo": "https://github.com/PowerShellMafia/PowerSploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "63": {
+                "name": "proxystrike",
+                "desc": "Automatically exported from code.google.com/p/proxystrike.->",
+                "repo": "https://github.com/bincker/proxystrike",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "64": {
+                "name": "Meterpreter_Paranoid_Mode-SSL",
+                "desc": "Meterpreter Paranoid Mode - SSL/TLS connections.->",
+                "repo": "https://github.com/r00t-3xp10it/Meterpreter_Paranoid_Mode-SSL",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "65": {
+                "name": "routersploit",
+                "desc": "Exploitation Framework for Embedded Devices.->",
+                "repo": "https://github.com/threat9/routersploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "66": {
+                "name": "shell-scan",
+                "desc": "Look for a backdoor shell on the website.->",
+                "repo": "https://github.com/assetnote/react2shell-scanner",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "67": {
+                "name": "jsql-injection",
+                "desc": "jSQL Injection is a Java application for automatic SQL database injection..->",
+                "repo": "https://github.com/ron190/jsql-injection",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "68": {
+                "name": "killchain",
+                "desc": "A unified console to perform the \"kill chain\" stages of attacks..->",
+                "repo": "https://github.com/ruped24/killchain",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "69": {
+                "name": "sqlmate",
+                "desc": "A friend of SQLmap which will do what you always expected from SQLmap..->",
+                "repo": "https://github.com/s0md3v/sqlmate",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "70": {
+                "name": "nishang",
+                "desc": "Nishang - Offensive PowerShell for red team, penetration testing and offensive security. .->",
+                "repo": "https://github.com/samratashok/nishang",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "71": {
+                "name": "kojawafft",
+                "desc": "newfft.->",
+                "repo": "https://github.com/sandalpenyok/kojawafft",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "72": {
+                "name": "the-backdoor-factory",
+                "desc": "Patch PE, ELF, Mach-O binaries with shellcode (NOT Supported).->",
+                "repo": "https://github.com/secretsquirrel/the-backdoor-factory",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "73": {
+                "name": "termineter",
+                "desc": "Smart Meter Security Testing Framework.->",
+                "repo": "https://github.com/rsmusllp/termineter",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "74": {
+                "name": "D-TECT-1",
+                "desc": "D-TECT - Pentesting the Modern Web.->",
+                "repo": "https://github.com/PratyushSawan/D-TECT-1",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "75": {
+                "name": "bulk_extractor",
+                "desc": "This is the development tree. For downloads please see:.->",
+                "repo": "https://github.com/simsong/bulk_extractor",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "76": {
+                "name": "deblaze",
+                "desc": "Performs method enumeration and interrogation against flash remoting end points..->",
+                "repo": "https://github.com/SpiderLabs/deblaze",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "77": {
+                "name": "DSVW",
+                "desc": "Damn Small Vulnerable Web.->",
+                "repo": "https://github.com/stamparm/DSVW",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "78": {
+                "name": "cpscan",
+                "desc": "website admin panel finder.->",
+                "repo": "https://github.com/SusmithKrishnan/cpscan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "79": {
+                "name": "torghost",
+                "desc": "Tor anonimizer.->",
+                "repo": "https://github.com/SusmithKrishnan/torghost",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "80": {
+                "name": "websploit",
+                "desc": "Websploit is an advanced MITM framework..->",
+                "repo": "https://github.com/f4rih/websploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "81": {
+                "name": "CHAOS",
+                "desc": "\ud83d\udd25 CHAOS is a PoC that allow generate payloads and control remote operating systems..->",
+                "repo": "https://github.com/tiagorlampert/CHAOS",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "82": {
+                "name": "sAINT",
+                "desc": "\ud83d\udc41\ufe0f (s)AINT is a Spyware Generator for Windows systems written in Java. [Discontinued].->",
+                "repo": "https://github.com/tiagorlampert/sAINT",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "83": {
+                "name": "yersinia",
+                "desc": "A framework for layer 2 attacks.->",
+                "repo": "https://github.com/tomac/yersinia",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "84": {
+                "name": "CMSeeK",
+                "desc": "CMS Detection and Exploitation suite - Scan WordPress, Joomla, Drupal and over 170 other CMSs.->",
+                "repo": "https://github.com/Tuhinshubhra/CMSeeK",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "85": {
+                "name": "Breacher",
+                "desc": "An advanced multithreaded admin panel finder written in python..->",
+                "repo": "https://github.com/s0md3v/Breacher",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "86": {
+                "name": "sqlmate",
+                "desc": "A friend of SQLmap which will do what you always expected from SQLmap..->",
+                "repo": "https://github.com/s0md3v/sqlmate",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "87": {
+                "name": "EvilURL",
+                "desc": "Generate unicode evil domains for IDN Homograph Attack and detect them..->",
+                "repo": "https://github.com/UndeadSec/EvilURL",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "88": {
+                "name": "GoblinWordGenerator",
+                "desc": "Python wordlist generator .->",
+                "repo": "https://github.com/UndeadSec/GoblinWordGenerator",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "89": {
+                "name": "sniffjoke",
+                "desc": "a client-only layer of protection from the wiretap/sniff/IDS analysis.->",
+                "repo": "https://github.com/vecna/sniffjoke",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "90": {
+                "name": "volatility",
+                "desc": "An advanced memory forensics framework.->",
+                "repo": "https://github.com/volatilityfoundation/volatility",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "91": {
+                "name": "websploit",
+                "desc": "websploit is an advanced MITM framework.->",
+                "repo": "https://github.com/f4rih/websploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "92": {
+                "name": "doona",
+                "desc": "Network based protocol fuzzer.->",
+                "repo": "https://github.com/wireghoul/doona",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "93": {
+                "name": "dotdotpwn",
+                "desc": "DotDotPwn - The Directory Traversal Fuzzer.->",
+                "repo": "https://github.com/wireghoul/dotdotpwn",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "94": {
+                "name": "wfuzz",
+                "desc": "Web application fuzzer.->",
+                "repo": "https://github.com/xmendez/wfuzz",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "95": {
+                "name": "Cookie-stealer",
+                "desc": "Crappy cookie stealer.->",
+                "repo": "https://github.com/Jupiterha/Ayhu-Stealer",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "96": {
+                "name": "zaproxy",
+                "desc": "The OWASP ZAP core project.->",
+                "repo": "https://github.com/zaproxy/zaproxy",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            }
+        },
+        "01": {
+            "01": {
+                "name": "ReconCobra",
+                "desc": "Complete Automated pentest framework for Information Gathering.->",
+                "repo": "https://github.com/HackerUniverse/Reconcobra",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "02": {
+                "name": "TekDefense-Automater",
+                "desc": "Automater - IP URL and MD5 OSINT Analysis.->",
+                "repo": "https://github.com/1aN0rmus/TekDefense-Automater",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "03": {
+                "name": "LITEDDOS",
+                "desc": "This Tool Is Supporting For DDOS Activities, The Way Is Typing Command : $ python2 islddos.py example: $python2 islddos.py 104.27.190.77 8080 100 IP target: 104.27.190.77 port: 8080 packet:100 Made In indonesia Indonesia Security Lite.->",
+                "repo": "https://github.com/4L13199/LITEDDOS",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "04": {
+                "name": "djangohunter",
+                "desc": "Tool designed to help identify incorrectly configured Django applications that are exposing sensitive information..->",
+                "repo": "https://github.com/jimywork/djangohunter",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "05": {
+                "name": "shodanwave",
+                "desc": "Shodanwave is a tool for exploring and obtaining information from Netwave IP Camera. .->",
+                "repo": "https://github.com/jimywork/shodanwave",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "06": {
+                "name": "WebXploiter",
+                "desc": "WebXploiter - An OWASP Top 10 Security scanner !.->",
+                "repo": "https://github.com/a0xnirudh/WebXploiter",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "07": {
+                "name": "TrackOut",
+                "desc": "Simple Python IP Tracker.->",
+                "repo": "https://github.com/abaykan/TrackOut",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "08": {
+                "name": "sslcaudit",
+                "desc": "No description provided->",
+                "repo": "https://github.com/abbbe/sslcaudit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "09": {
+                "name": "sir",
+                "desc": "Skype Ip Resolver.->",
+                "repo": "https://github.com/plamoni/SiriProxy",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "10": {
+                "name": "xl-py",
+                "desc": "No description provided->",
+                "repo": "https://github.com/graykode/xlnet-Pytorch",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "11": {
+                "name": "ATSCAN",
+                "desc": "Advanced dork Search & Mass Exploit Scanner.->",
+                "repo": "https://github.com/AlisamTechnology/ATSCAN",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "12": {
+                "name": "fuxploider",
+                "desc": "File upload vulnerability scanner and exploitation tool..->",
+                "repo": "https://github.com/almandin/fuxploider",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "13": {
+                "name": "ipwn",
+                "desc": "No description provided->",
+                "repo": "https://github.com/axi0mX/ipwndfu",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "14": {
+                "name": "w3af",
+                "desc": "w3af: web application attack and audit framework, the open source web vulnerability scanner..->",
+                "repo": "https://github.com/andresriancho/w3af",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "15": {
+                "name": "AndroBugs_Framework",
+                "desc": "AndroBugs Framework is an efficient Android vulnerability scanner that helps developers or hackers find potential security vulnerabilities in Android applications. No need to install on Windows..->",
+                "repo": "https://github.com/AndroBugs/AndroBugs_Framework",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "16": {
+                "name": "PadBuster",
+                "desc": "Automated script for performing Padding Oracle attacks.->",
+                "repo": "https://github.com/strozfriedberg/PadBuster",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "17": {
+                "name": "capstone",
+                "desc": "Capstone disassembly/disassembler framework: Core (Arm, Arm64, BPF, EVM, M68K, M680X, MOS65xx, Mips, PPC, RISCV, Sparc, SystemZ, TMS320C64x, Web Assembly, X86, X86_64, XCore) + bindings..->",
+                "repo": "https://github.com/capstone-engine/capstone",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "18": {
+                "name": "lscript",
+                "desc": "The LAZY script will make your life easier, and of course faster..->",
+                "repo": "https://github.com/arismelachroinos/lscript",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "19": {
+                "name": "Termux-Styling-Shell-Script",
+                "desc": "Unofficial Termux Styling [ Bash ].->",
+                "repo": "https://github.com/BagazMukti/Termux-Styling-Shell-Script",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "20": {
+                "name": "killshot",
+                "desc": "A Penetration Testing Framework, Information gathering tool & Website Vulnerability Scanner.->",
+                "repo": "https://github.com/bahaabdelwahed/killshot",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "21": {
+                "name": "admin-panel-finder",
+                "desc": "A Python Script to find admin panel of a site.->",
+                "repo": "https://github.com/s0md3v/Breacher",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "22": {
+                "name": "bettercap",
+                "desc": "The Swiss Army knife for 802.11, BLE and Ethernet networks reconnaissance and MITM attacks..->",
+                "repo": "https://github.com/bettercap/bettercap",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "23": {
+                "name": "trape",
+                "desc": "People tracker on the Internet: OSINT analysis and research tool by Jose Pino.->",
+                "repo": "https://github.com/jofpin/trape",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "24": {
+                "name": "netattack",
+                "desc": "A simple python script to scan and attack wireless networks..->",
+                "repo": "https://github.com/chrizator/netattack2",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "25": {
+                "name": "netattack2",
+                "desc": "An advanced network scan and attack script based on GUI. 2nd version of no-GUI netattack. .->",
+                "repo": "https://github.com/chrizator/netattack2",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "26": {
+                "name": "ko-dork",
+                "desc": "A simple vuln web scanner.->",
+                "repo": "https://github.com/tank4l/ko-dork",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "27": {
+                "name": "OSIF",
+                "desc": "Open Source Information Facebook.->",
+                "repo": "https://github.com/0xlousie/OSIF",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "28": {
+                "name": "lynis",
+                "desc": "Lynis - Security auditing tool for Linux, macOS, and UNIX-based systems. Assists with compliance testing (HIPAA/ISO27001/PCI DSS) and system hardening. Agentless, and installation optional..->",
+                "repo": "https://github.com/CISOfy/lynis",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "29": {
+                "name": "Easymap",
+                "desc": "No description provided->",
+                "repo": "https://github.com/lucasmedeirosleite/EasyMapping",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "30": {
+                "name": "Hac",
+                "desc": "No description provided->",
+                "repo": "https://github.com/hacs/documentation",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "31": {
+                "name": "sqlscan",
+                "desc": "Quick SQL Scanner, Dorker, Webshell injector PHP.->",
+                "repo": "https://github.com/Cvar1984/sqlscan",
+                "reqs": "php",
+                "help_cmd": "ls"
+            },
+            "32": {
+                "name": "hammer",
+                "desc": "Hammer DDos Script - Python 3.->",
+                "repo": "https://github.com/hammerjs/hammer.js",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "33": {
+                "name": "Kadabra",
+                "desc": "[DEPRECATED] Kadabra is my automatic LFI Exploiter and Scanner, written in C++ and a couple extern module in Python..->",
+                "repo": "https://github.com/codedge-llc/kadabra",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "34": {
+                "name": "LFISuite",
+                "desc": "Totally Automatic LFI Exploiter (+ Reverse Shell) and Scanner .->",
+                "repo": "https://github.com/D35m0nd142/LFISuite",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "35": {
+                "name": "Clickjacking-Tester",
+                "desc": "A python script designed to check if the website if vulnerable of clickjacking and create a poc.->",
+                "repo": "https://github.com/D4Vinci/Clickjacking-Tester",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "36": {
+                "name": "elpscrk",
+                "desc": "A Common User Passwords generator script that looks like the tool Eliot used it in Mr.Robot Series Episode 01 :D :v.->",
+                "repo": "https://github.com/D4Vinci/elpscrk",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "37": {
+                "name": "SecLists",
+                "desc": "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more..->",
+                "repo": "https://github.com/danielmiessler/SecLists",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "38": {
+                "name": "dnsrecon",
+                "desc": "DNS Enumeration Script.->",
+                "repo": "https://github.com/darkoperator/dnsrecon",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "39": {
+                "name": "HiddenEye",
+                "desc": "Modern Phishing Tool With Advanced Functionality And Multiple Tunnelling Services [ Android-Support-Available ].->",
+                "repo": "https://github.com/D4rkS3c-Group/HiddenEyeReborn",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "40": {
+                "name": "wifite",
+                "desc": "No description provided->",
+                "repo": "https://github.com/derv82/wifite2",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "41": {
+                "name": "CMSmap",
+                "desc": "CMSmap is a python open source CMS scanner that automates the process of detecting security flaws of the most popular CMSs. .->",
+                "repo": "https://github.com/dionach/CMSmap",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "42": {
+                "name": "RTLSDR-Scanner",
+                "desc": "A cross platform Python frequency scanning GUI for the OsmoSDR rtl-sdr library.->",
+                "repo": "https://github.com/EarToEarOak/RTLSDR-Scanner",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "43": {
+                "name": "The-Eye",
+                "desc": "Simple security surveillance script for linux distributions..->",
+                "repo": "https://github.com/manideep2510/eye-in-the-sky",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "44": {
+                "name": "multimon-ng",
+                "desc": "No description provided->",
+                "repo": "https://github.com/EliasOenal/multimon-ng",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "45": {
+                "name": "sipvicious",
+                "desc": "SIPVicious suite is a set of security tools that can be used to audit SIP based VoIP systems..->",
+                "repo": "https://github.com/EnableSecurity/sipvicious",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "46": {
+                "name": "xsser",
+                "desc": "Cross Site \"Scripter\" (aka XSSer) is an automatic -framework- to detect, exploit and report XSS vulnerabilities in web-based applications..->",
+                "repo": "https://github.com/epsylon/xsser",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "47": {
+                "name": "wifi-hacker",
+                "desc": "Shell Script For Attacking Wireless Connections Using Built-In Kali Tools. Supports All Securities (WEP, WPS, WPA, WPA2).->",
+                "repo": "https://github.com/esc0rtd3w/wifi-hacker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "48": {
+                "name": "nodexp",
+                "desc": "NodeXP - A Server Side Javascript Injection tool capable of detecting and exploiting Node.js vulnerabilities.->",
+                "repo": "https://github.com/esmog/nodexp",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "49": {
+                "name": "rang3r",
+                "desc": "rang3r | Multi Thread IP + Port Scanner.->",
+                "repo": "https://github.com/floriankunushevci/rang3r",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "50": {
+                "name": "EyeWitness",
+                "desc": "EyeWitness is designed to take screenshots of websites, provide some server header info, and identify default credentials if possible..->",
+                "repo": "https://github.com/RedSiege/EyeWitness",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "51": {
+                "name": "dnsenum",
+                "desc": "dnsenum is a perl script that enumerates DNS information.->",
+                "repo": "https://github.com/fwaeytens/dnsenum",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "52": {
+                "name": "AstraNmap",
+                "desc": "No description provided->",
+                "repo": "https://github.com/Gameye98/AstraNmap",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "53": {
+                "name": "Auxscan",
+                "desc": "No description provided->",
+                "repo": "https://github.com/Gameye98/Auxscan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "54": {
+                "name": "Black-Hydra",
+                "desc": "No description provided->",
+                "repo": "https://github.com/Gameye98/Black-Hydra",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "55": {
+                "name": "GINF",
+                "desc": "Github information gathering.->",
+                "repo": "https://github.com/mazezen/ginframe",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "56": {
+                "name": "inther",
+                "desc": "No description provided->",
+                "repo": "https://github.com/Gameye98/inther",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "57": {
+                "name": "OWScan",
+                "desc": "No description provided->",
+                "repo": "https://github.com/Gameye98/OWScan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "58": {
+                "name": "santet-online",
+                "desc": "No description provided->",
+                "repo": "https://github.com/Gameye98/santet-online",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "59": {
+                "name": "SCANNER-INURLBR",
+                "desc": "Advanced search in search engines, enables analysis provided to exploit GET / POST capturing emails & urls, with an internal custom validation junction for each target / url found..->",
+                "repo": "https://github.com/googleinurl/SCANNER-INURLBR",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "60": {
+                "name": "openvas",
+                "desc": "Open Vulnerability Assessment Scanner.->",
+                "repo": "https://github.com/mikesplain/openvas-docker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "61": {
+                "name": "Gemail-Hack",
+                "desc": "python script for Hack gmail account brute force.->",
+                "repo": "https://github.com/Ha3MrX/Gemail-Hack",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "62": {
+                "name": "Namechk",
+                "desc": "Osint tool based on namechk.com for checking usernames on more than 100 websites, forums and social networks..->",
+                "repo": "https://github.com/GONZOsint/Namechk",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "63": {
+                "name": "4nonimizer",
+                "desc": "A bash script for anonymizing the public IP used to browsing Internet, managing the connection to TOR network and to different VPNs providers (OpenVPN).->",
+                "repo": "https://github.com/Hackplayers/4nonimizer",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "64": {
+                "name": "sqliv",
+                "desc": "massive SQL injection vulnerability scanner.->",
+                "repo": "https://github.com/the-robot/sqliv",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "65": {
+                "name": "Metasploit_termux",
+                "desc": "No description provided->",
+                "repo": "https://github.com/gushmazuko/metasploit_in_termux",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "66": {
+                "name": "Nethunter-In-Termux",
+                "desc": "This is a script by which you can install Kali nethunter (Kali Linux) in your termux application without rooted phone .->",
+                "repo": "https://github.com/Hax4us/Nethunter-In-Termux",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "67": {
+                "name": "TermuxAlpine",
+                "desc": "Use TermuxAlpine.sh calling to install Alpine Linux in Termux on Android. This setup script will attempt to set Alpine Linux up in your Termux environment..->",
+                "repo": "https://github.com/Hax4us/TermuxAlpine",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "68": {
+                "name": "MSF-Pg",
+                "desc": "No description provided->",
+                "repo": "https://github.com/yesrab/MSF-Pg",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "69": {
+                "name": "Planetwork-DDOS",
+                "desc": "No description provided->",
+                "repo": "https://github.com/WORXKiT/Planetwork-DDOS",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "70": {
+                "name": "angryFuzzer",
+                "desc": "Tools for information gathering.->",
+                "repo": "https://github.com/ihebski/angryFuzzer",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "71": {
+                "name": "dmitry",
+                "desc": "DMitry (Deepmagic Information Gathering Tool).->",
+                "repo": "https://github.com/jaygreig86/dmitry",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "72": {
+                "name": "blackbox",
+                "desc": "No description provided->",
+                "repo": "https://github.com/prometheus/blackbox_exporter",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "73": {
+                "name": "DHCPig",
+                "desc": "DHCP exhaustion script written in python using scapy network library.->",
+                "repo": "https://github.com/kamorin/DHCPig",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "74": {
+                "name": "RegRipper2.8",
+                "desc": "RegRipper version 2.8.->",
+                "repo": "https://github.com/padfoot999/RegRipper2.8",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "75": {
+                "name": "recon-ng",
+                "desc": "Open Source Intelligence gathering tool aimed at reducing the time spent harvesting information from open sources..->",
+                "repo": "https://github.com/lanmaster53/recon-ng",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "76": {
+                "name": "theHarvester",
+                "desc": "E-mails, subdomains and names Harvester - OSINT .->",
+                "repo": "https://github.com/laramies/theHarvester",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "77": {
+                "name": "Evil-create-framework",
+                "desc": "No description provided->",
+                "repo": "https://github.com/LOoLzeC/Evil-create-framework",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "78": {
+                "name": "SH33LL",
+                "desc": "SHELL SCANNER.->",
+                "repo": "https://github.com/LOoLzeC/SH33LL",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "79": {
+                "name": "Infoga",
+                "desc": "Infoga - Email OSINT.->",
+                "repo": "https://github.com/robertswin/Infoga",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "80": {
+                "name": "WAScan",
+                "desc": "WAScan - Web Application Scanner.->",
+                "repo": "https://github.com/cyberflakeconnect/wascan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "81": {
+                "name": "WPSeku",
+                "desc": "WPSeku - Wordpress Security Scanner .->",
+                "repo": "https://github.com/Redshoee/WPSeku",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "82": {
+                "name": "subscraper",
+                "desc": "External pentest and bug bounty tool to perform subdomain enumeration through various techniques. SubScraper will provide information such as HTTP & DNS lookups to aid in potential next steps..->",
+                "repo": "https://github.com/m8sec/subscraper",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "83": {
+                "name": "IPGeoLocation",
+                "desc": "Retrieve IP Geolocation information.->",
+                "repo": "https://github.com/maldevel/IPGeoLocation",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "84": {
+                "name": "Crips",
+                "desc": "IP Tools To quickly get information about IP Address's, Web Pages and DNS records..->",
+                "repo": "https://github.com/Manisso/Crips",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "85": {
+                "name": "Mercury",
+                "desc": "Mercury is a hacking tool used to collect information and use the information to further hurt the target.->",
+                "repo": "https://github.com/jejacks0n/mercury",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "86": {
+                "name": "WP-plugin-scanner",
+                "desc": "A tool to list plugins installed on a wordpress powered website..->",
+                "repo": "https://github.com/CCSIR/WP-Plugins-Scanner",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "87": {
+                "name": "Th3inspector",
+                "desc": "Th3Inspector \ud83d\udd75\ufe0f Best Tool For Information Gathering \ud83d\udd0e.->",
+                "repo": "https://github.com/Moham3dRiahi/Th3inspector",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "88": {
+                "name": "XAttacker",
+                "desc": "X Attacker Tool \u2623 Website Vulnerability Scanner & Auto Exploiter.->",
+                "repo": "https://github.com/Moham3dRiahi/XAttacker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "89": {
+                "name": "sslstrip",
+                "desc": "A tool for exploiting Moxie Marlinspike's SSL \"stripping\" attack..->",
+                "repo": "https://github.com/moxie0/sslstrip",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "90": {
+                "name": "FBUPv2.0",
+                "desc": "No description provided->",
+                "repo": "https://github.com/Hendriyawan/FBUPv2.0",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "91": {
+                "name": "fierce",
+                "desc": "A DNS reconnaissance tool for locating non-contiguous IP space..->",
+                "repo": "https://github.com/Raikia/FiercePhish",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "92": {
+                "name": "termux-fedora",
+                "desc": "A script to install a Fedora chroot into Termux.->",
+                "repo": "https://github.com/nmilosev/termux-fedora",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "93": {
+                "name": "AutoPixieWps",
+                "desc": "Automated pixieWps python script.->",
+                "repo": "https://github.com/nxxxu/AutoPixieWps",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "94": {
+                "name": "zirikatu",
+                "desc": "Fud Payload generator script.->",
+                "repo": "https://github.com/pasahitz/zirikatu",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "95": {
+                "name": "eternal_scanner",
+                "desc": "An internet scanner for exploit CVE-2017-0144 (Eternal Blue) & CVE-2017-0145 (Eternal Romance).->",
+                "repo": "https://github.com/peterpt/eternal_scanner",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "96": {
+                "name": "get",
+                "desc": "Get is a simple script to retrieve an ip from hostname or vice-versa ..->",
+                "repo": "https://github.com/soimort/you-get",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "97": {
+                "name": "morpheus",
+                "desc": "Morpheus - Automating Ettercap TCP/IP (MITM-hijacking Tool).->",
+                "repo": "https://github.com/nv-morpheus/Morpheus",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "98": {
+                "name": "XPL-SEARCH",
+                "desc": "Search exploits in multiple exploit databases!.->",
+                "repo": "https://github.com/CoderPirata/XPL-SEARCH",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "99": {
+                "name": "ezsploit",
+                "desc": "Linux bash script automation for metasploit.->",
+                "repo": "https://github.com/rand0m1ze/ezsploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "100": {
+                "name": "joomscan",
+                "desc": "OWASP Joomla Vulnerability Scanner Project.->",
+                "repo": "https://github.com/OWASP/joomscan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "101": {
+                "name": "masscan",
+                "desc": "TCP port scanner, spews SYN packets asynchronously, scanning entire Internet in under 5 minutes..->",
+                "repo": "https://github.com/robertdavidgraham/masscan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "102": {
+                "name": "intrace",
+                "desc": "Enumeration of IP hops using existing TCP connections.->",
+                "repo": "https://github.com/Fusl/intrace",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "103": {
+                "name": "arp-scan",
+                "desc": "The ARP Scanner.->",
+                "repo": "https://github.com/royhills/arp-scan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "104": {
+                "name": "Striker",
+                "desc": "Striker is an offensive information and vulnerability scanner..->",
+                "repo": "https://github.com/s0md3v/Striker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "105": {
+                "name": "XSStrike",
+                "desc": "Most advanced XSS scanner..->",
+                "repo": "https://github.com/s0md3v/XSStrike",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "106": {
+                "name": "Dracnmap",
+                "desc": "Dracnmap is an open source program which is using to exploit the network and gathering information with nmap help. Nmap command comes with lots of options that can make the utility more robust and difficult to follow for new users. Hence Dracnmap is designed to perform fast scaning with the utilizing script engine of nmap and nmap can perform various automatic scanning techniques with the advanced commands..->",
+                "repo": "https://github.com/screetsec/Dracnmap",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "107": {
+                "name": "LALIN",
+                "desc": "this script automatically install any package for pentest with uptodate tools , and lazy command for run the tools like lazynmap , install another and update to new #actually for lazy people hahaha #and Lalin is remake the lazykali with fixed bugs , added new features and uptodate tools . It's compatible with the latest release of Kali (Rolling).->",
+                "repo": "https://github.com/screetsec/LALIN",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "108": {
+                "name": "kwetza",
+                "desc": "Python script to inject existing Android applications with a Meterpreter payload..->",
+                "repo": "https://github.com/sensepost/kwetza",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "109": {
+                "name": "johnny",
+                "desc": "The GUI frontend to the John the Ripper password cracker.->",
+                "repo": "https://github.com/rwaldron/johnny-five",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "110": {
+                "name": "PwnSTAR",
+                "desc": "PwnSTAR (Pwn SofT-Ap scRipt) - for all your fake-AP needs!.->",
+                "repo": "https://github.com/SilverFoxx/PwnSTAR",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "111": {
+                "name": "termux-wordpresscan",
+                "desc": "No description provided->",
+                "repo": "https://github.com/silverhat007/termux-wordpresscan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "112": {
+                "name": "fuckshitup",
+                "desc": "php-cli vulnerability scanner.->",
+                "repo": "https://github.com/Smaash/fuckshitup",
+                "reqs": "php",
+                "help_cmd": "ls"
+            },
+            "113": {
+                "name": "snitch",
+                "desc": "information gathering via dorks.->",
+                "repo": "https://github.com/karol-broda/snitch",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "114": {
+                "name": "Zerodoor",
+                "desc": "A script written lazily for generating cross-platform backdoors on the go :) .->",
+                "repo": "https://github.com/Souhardya/Zerodoor",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "115": {
+                "name": "jboss-autopwn",
+                "desc": "A JBoss script for obtaining remote shell access.->",
+                "repo": "https://github.com/SpiderLabs/jboss-autopwn",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "116": {
+                "name": "termux-sudo",
+                "desc": "A bash script that provides sudo for Termux.->",
+                "repo": "https://github.com/st42/termux-sudo",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "117": {
+                "name": "DSSS",
+                "desc": "Damn Small SQLi Scanner.->",
+                "repo": "https://github.com/stamparm/DSSS",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "118": {
+                "name": "DSXS",
+                "desc": "Damn Small XSS Scanner.->",
+                "repo": "https://github.com/stamparm/DSXS",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "119": {
+                "name": "nikto",
+                "desc": "Nikto web server scanner.->",
+                "repo": "https://github.com/sullo/nikto",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "120": {
+                "name": "IP-FY",
+                "desc": "Gathers information about a Particular IP address.->",
+                "repo": "https://github.com/bedotroy4341/IP-FY",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "121": {
+                "name": "reaver-wps-fork-t6x",
+                "desc": "No description provided->",
+                "repo": "https://github.com/t6x/reaver-wps-fork-t6x",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "122": {
+                "name": "RED_HAWK",
+                "desc": "All in one tool for Information Gathering, Vulnerability Scanning and Crawling. A must have tool for all penetration testers.->",
+                "repo": "https://github.com/Tuhinshubhra/RED_HAWK",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "123": {
+                "name": "Androspy",
+                "desc": "Androspy framework is a Backdoor Crypter & Creator with Automatic IP Poisener.->",
+                "repo": "https://github.com/F-Society-Freaks/AndroSpy",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "124": {
+                "name": "gasmask",
+                "desc": "Information gathering tool - OSINT.->",
+                "repo": "https://github.com/2ndalpha/gasmask",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "125": {
+                "name": "ReconDog",
+                "desc": "Reconnaissance Swiss Army Knife.->",
+                "repo": "https://github.com/s0md3v/ReconDog",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "126": {
+                "name": "Striker",
+                "desc": "Striker is an offensive information and vulnerability scanner..->",
+                "repo": "https://github.com/s0md3v/Striker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "127": {
+                "name": "XSStrike",
+                "desc": "Most advanced XSS scanner..->",
+                "repo": "https://github.com/s0md3v/XSStrike",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "128": {
+                "name": "SocialFish",
+                "desc": "Educational Phishing Tool & Information Collector .->",
+                "repo": "https://github.com/UndeadSec/SocialFish",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "129": {
+                "name": "bing-ip2hosts",
+                "desc": "bingip2hosts is a Bing.com web scraper that discovers websites by IP address.->",
+                "repo": "https://github.com/urbanadventurer/bing-ip2hosts",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "130": {
+                "name": "WhatWeb",
+                "desc": "Next generation web scanner.->",
+                "repo": "https://github.com/urbanadventurer/WhatWeb",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "131": {
+                "name": "CredSniper",
+                "desc": "CredSniper is a phishing framework written with the Python micro-framework Flask and Jinja2 templating which supports capturing 2FA tokens..->",
+                "repo": "https://github.com/ustayready/CredSniper",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "132": {
+                "name": "airgeddon",
+                "desc": "This is a multi-use bash script for Linux systems to audit wireless networks..->",
+                "repo": "https://github.com/v1s1t0r1sh3r3/airgeddon",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "133": {
+                "name": "thc-ipv6",
+                "desc": "IPv6 attack toolkit.->",
+                "repo": "https://github.com/vanhauser-thc/thc-ipv6",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "134": {
+                "name": "air-hammer",
+                "desc": "No description provided->",
+                "repo": "https://github.com/Wh1t3Rh1n0/air-hammer",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "135": {
+                "name": "wifiphisher",
+                "desc": "The Rogue Access Point Framework.->",
+                "repo": "https://github.com/wifiphisher/wifiphisher",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "136": {
+                "name": "wpscan",
+                "desc": "WPScan is a free, for non-commercial use, black box WordPress Vulnerability Scanner written for security professionals and blog maintainers to test the security of their WordPress websites..->",
+                "repo": "https://github.com/wpscanteam/wpscan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "137": {
+                "name": "fbi",
+                "desc": "Facebook Information.->",
+                "repo": "https://github.com/danieldurnea/FBI-tools",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "138": {
+                "name": "A-Rat",
+                "desc": "No description provided->",
+                "repo": "https://github.com/RexTheGod/A-Rat",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "139": {
+                "name": "giskismet",
+                "desc": "giskismet \u2013 Wireless recon visualization tool.->",
+                "repo": "https://github.com/xtr4nge/giskismet",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "140": {
+                "name": "cdpsnarf",
+                "desc": "CDPSnarf is a network sniffer exclusively written to extract information from CDP (Cisco Discovery Protocol) packets. .->",
+                "repo": "https://github.com/Zapotek/cdpsnarf",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "141": {
+                "name": "koadic",
+                "desc": "Koadic C3 COM Command & Control - JScript RAT.->",
+                "repo": "https://github.com/jimywork/koadic",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "142": {
+                "name": "webpwn3r",
+                "desc": "WebPwn3r - Web Applications Security Scanner..->]([->",
+                "repo": "https://github.com/zigoo0/webpwn3r",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            }
+        },
+        "06": {
+            "01": {
+                "name": "HttpLiveProxyGrabber",
+                "desc": "Best Proxy Grabber Tool!.->",
+                "repo": "https://github.com/exploit-inters/HttpLiveProxyGrabber",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "02": {
+                "name": "ToolB0x",
+                "desc": "Hacking Tools \u26a1.->",
+                "repo": "https://github.com/pooriayousefi/toolb0x",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "03": {
+                "name": "Sublist3r",
+                "desc": "Fast subdomains enumeration tool for penetration testers.->",
+                "repo": "https://github.com/aboul3la/Sublist3r",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "04": {
+                "name": "wirespy",
+                "desc": "Framework designed to automate various wireless networks attacks (the project was presented on Pentester Academy TV's toolbox in 2017)..->",
+                "repo": "https://github.com/aress31/wirespy",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "05": {
+                "name": "ADB-Toolkit",
+                "desc": "ADB-Toolkit V2 for easy ADB tricks with many perks in all one. ENJOY!.->",
+                "repo": "https://github.com/ASHWIN990/ADB-Toolkit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "06": {
+                "name": "Parsero",
+                "desc": "Parsero | Robots.txt audit tool.->",
+                "repo": "https://github.com/behindthefirewalls/Parsero",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "07": {
+                "name": "wfdroid-termux",
+                "desc": "Android Terminal Web-Hacking Tools.->",
+                "repo": "https://github.com/bytezcrew/wfdroid-termux",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "08": {
+                "name": "fbht",
+                "desc": "Facebook Hacking Tool.->",
+                "repo": "https://github.com/chinoogawa/fbht",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "09": {
+                "name": "commix",
+                "desc": "Automated All-in-One OS command injection and exploitation tool..->",
+                "repo": "https://github.com/commixproject/commix",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "10": {
+                "name": "shimit",
+                "desc": "A tool that implements the Golden SAML attack.->",
+                "repo": "https://github.com/cyberark/shimit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "11": {
+                "name": "Pybelt",
+                "desc": "The hackers tool belt.->",
+                "repo": "https://github.com/Ekultek/Pybelt",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "12": {
+                "name": "Lazymux",
+                "desc": "termux tool installer.->",
+                "repo": "https://github.com/Gameye98/Lazymux",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "13": {
+                "name": "avet",
+                "desc": "AntiVirus Evasion Tool.->",
+                "repo": "https://github.com/govolution/avet",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "14": {
+                "name": "zarp",
+                "desc": "Network Attack Tool.->",
+                "repo": "https://github.com/hatRiot/zarp",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "15": {
+                "name": "plecost",
+                "desc": "Plecost - Wordpress finger printer Tool .->",
+                "repo": "https://github.com/iniqua/plecost",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "16": {
+                "name": "peepdf",
+                "desc": "Powerful Python tool to analyze PDF documents.->",
+                "repo": "https://github.com/jesparza/peepdf",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "17": {
+                "name": "Remot3d",
+                "desc": "Remot3d: is a simple tool created for large pentesters as well as just for the pleasure of defacers to control server by backdoors.->",
+                "repo": "https://github.com/makiraid/Remot3d",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "18": {
+                "name": "txtool",
+                "desc": "an easy pentesting tool..->",
+                "repo": "https://github.com/kuburan/txtool",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "19": {
+                "name": "InSpy",
+                "desc": "A python based LinkedIn enumeration tool.->",
+                "repo": "https://github.com/jobroche/InSpy",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "20": {
+                "name": "qark",
+                "desc": "Tool to look for several security related Android application vulnerabilities.->",
+                "repo": "https://github.com/linkedin/qark",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "21": {
+                "name": "fsociety",
+                "desc": "fsociety Hacking Tools Pack \u2013 A Penetration Testing Framework.->",
+                "repo": "https://github.com/Manisso/fsociety",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "22": {
+                "name": "CyberScan",
+                "desc": "CyberScan: Network's Forensics ToolKit.->",
+                "repo": "https://github.com/medbenali/CyberScan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "23": {
+                "name": "HTools",
+                "desc": "50+ Hacking Tools Collection.->",
+                "repo": "https://github.com/Janddda/50kaliTools-HTools",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "24": {
+                "name": "apt2",
+                "desc": "automated penetration toolkit.->",
+                "repo": "https://github.com/tatanus/apt2",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "25": {
+                "name": "DKMC",
+                "desc": "DKMC - Dont kill my cat - Malicious payload evasion tool.->",
+                "repo": "https://github.com/Mr-Un1k0d3r/DKMC",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "26": {
+                "name": "Stitch",
+                "desc": "Python Remote Administration Tool (RAT).->",
+                "repo": "https://github.com/nathanlopez/Stitch",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "27": {
+                "name": "demiguise",
+                "desc": "HTA encryption tool for RedTeams.->",
+                "repo": "https://github.com/nccgroup/demiguise",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "28": {
+                "name": "bbqsql",
+                "desc": "SQL Injection Exploitation Tool.->",
+                "repo": "https://github.com/CiscoCXSecurity/bbqsql",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "29": {
+                "name": "mfcuk",
+                "desc": "MiFare Classic Universal toolKit (MFCUK).->",
+                "repo": "https://github.com/nfc-tools/mfcuk",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "30": {
+                "name": "gobuster",
+                "desc": "Directory/File, DNS and VHost busting tool written in Go.->",
+                "repo": "https://github.com/OJ/gobuster",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "31": {
+                "name": "binwalk",
+                "desc": "Firmware Analysis Tool.->",
+                "repo": "https://github.com/ReFirmLabs/binwalk",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "32": {
+                "name": "shellnoob",
+                "desc": "A shellcode writing toolkit.->",
+                "repo": "https://github.com/reyammer/shellnoob",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "33": {
+                "name": "EasY_HaCk",
+                "desc": "Hack the World using Termux.->",
+                "repo": "https://github.com/sabri-zaki/EasY_HaCk",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "34": {
+                "name": "pwnat",
+                "desc": "The only tool and technique to punch holes through firewalls/NATs where both clients and server can be behind separate NATs without any 3rd party involvement. Pwnat uses a newly developed technique, exploiting a property of NAT translation tables, with no 3rd party, port forwarding, DMZ, router administrative requirements, STUN/TURN/UPnP/ICE, or spoofing required..->",
+                "repo": "https://github.com/samyk/pwnat",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "35": {
+                "name": "Brutal",
+                "desc": "Payload for teensy like a rubber ducky but the syntax is different. this Human interfaes device ( HID attacks ). Penetration With Teensy . Brutal is a toolkit to quickly create various payload,powershell attack , virus attack and launch listener for a Human Interface Device ( Payload Teensy ).->",
+                "repo": "https://github.com/screetsec/Brutal",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "36": {
+                "name": "TheFatRat",
+                "desc": "Thefatrat a massive exploiting tool : Easy tool to generate backdoor and easy tool to post exploitation attack like browser attack and etc . This tool compiles a malware with popular payload and then the compiled malware can be execute on windows, android, mac . The malware that created with this tool also have an ability to bypass most AV software protection ..->",
+                "repo": "https://github.com/screetsec/TheFatRat",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "37": {
+                "name": "smbmap",
+                "desc": "SMBMap is a handy SMB enumeration tool.->",
+                "repo": "https://github.com/ShawnDEvans/smbmap",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "38": {
+                "name": "uidsploit",
+                "desc": "The Uidsploit Framework | Penetration Test Tool.->",
+                "repo": "https://github.com/AnonHackerx/Uidsploit",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "39": {
+                "name": "sqlmap",
+                "desc": "Automatic SQL injection and database takeover tool.->",
+                "repo": "https://github.com/sqlmapproject/sqlmap",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "40": {
+                "name": "leviathan",
+                "desc": "wide range mass audit toolkit.->",
+                "repo": "https://github.com/utkusen/leviathan",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "41": {
+                "name": "shellstack",
+                "desc": "A PHP Based Tool That Helps You To Manage All Your Backdoored Websites Efficiently..->",
+                "repo": "https://github.com/Tuhinshubhra/shellstack",
+                "reqs": "php",
+                "help_cmd": "ls"
+            },
+            "42": {
+                "name": "termux-lazysqlmap",
+                "desc": "SQLMAP for Lazy People on Termux.->",
+                "repo": "https://github.com/IO1337/termux-lazysqlmap",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            }
+        },
+        "03": {
+            "01": {
+                "name": "instagramCracker",
+                "desc": "Full Speed Instagram Cracker.->",
+                "repo": "https://github.com/rohamasadi/instagramCracker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "02": {
+                "name": "BruteX",
+                "desc": "Automatically brute force all services running on a target..->",
+                "repo": "https://github.com/1N3/BruteX",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "03": {
+                "name": "CrawlBox",
+                "desc": "Easy way to brute-force web directory..->",
+                "repo": "https://github.com/abaykan/CrawlBox",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "04": {
+                "name": "hash-generator",
+                "desc": "beautiful hash generator.->",
+                "repo": "https://github.com/lachesis/scallion",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "05": {
+                "name": "hasher",
+                "desc": "Hash cracker with auto detect hash.->",
+                "repo": "https://github.com/millermedeiros/Hasher",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "06": {
+                "name": "WifiBruteCrack",
+                "desc": "Program to attempt to brute force all wifi networks in range of a device, and return a possible set of networks to connect to and the password,.->",
+                "repo": "https://github.com/cinquemb/WifiBruteCrack",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "07": {
+                "name": "wifite2",
+                "desc": "Rewrite of the popular wireless network auditor, \"wifite\".->",
+                "repo": "https://github.com/derv82/wifite2",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "08": {
+                "name": "hasherdotid",
+                "desc": "Hasherdotid.->",
+                "repo": "https://github.com/galauerscrew/hasherdotid",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "09": {
+                "name": "crowbar",
+                "desc": "Crowbar is brute forcing tool that can be used during penetration tests. It is developed to support protocols that are not currently supported by thc-hydra and other popular brute forcing tools. .->",
+                "repo": "https://github.com/galkan/crowbar",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "10": {
+                "name": "wifitap",
+                "desc": "wifitap updated for BT5r3.->",
+                "repo": "https://github.com/GDSSecurity/wifitap",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "11": {
+                "name": "Leaked",
+                "desc": "Leaked? 2.1 - A Checking tool for Hash codes, Passwords and Emails leaked.->",
+                "repo": "https://github.com/linexjlin/GPTs",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "12": {
+                "name": "hashcat",
+                "desc": "World's fastest and most advanced password recovery utility.->",
+                "repo": "https://github.com/hashcat/hashcat",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "13": {
+                "name": "PyBozoCrack",
+                "desc": "A silly & effective MD5 cracker in Python.->",
+                "repo": "https://github.com/ikkebr/PyBozoCrack",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "14": {
+                "name": "cowpatty",
+                "desc": "coWPAtty: WPA2-PSK Cracking.->",
+                "repo": "https://github.com/joswr1ght/cowpatty",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "15": {
+                "name": "Pyrit",
+                "desc": "The famous WPA precomputed cracker, Migrated from Google..->",
+                "repo": "https://github.com/Azure/PyRIT",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "16": {
+                "name": "pydictor",
+                "desc": "A powerful and useful hacker dictionary builder for a brute-force attack.->",
+                "repo": "https://github.com/LandGrey/pydictor",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "17": {
+                "name": "wifresti",
+                "desc": "Find your wireless network password in Windows , Linux and Mac OS.->",
+                "repo": "https://github.com/LionSec/wifresti",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "18": {
+                "name": "SMBrute",
+                "desc": "SMB Protocol Bruteforce.->",
+                "repo": "https://github.com/mlynchcogent/SMBrute",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "19": {
+                "name": "cupp",
+                "desc": "Common User Passwords Profiler (CUPP).->",
+                "repo": "https://github.com/Mebus/cupp",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "20": {
+                "name": "Hatch",
+                "desc": "Hatch is a brute force tool that is used to brute force most websites.->",
+                "repo": "https://github.com/pypa/hatch",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "21": {
+                "name": "crackle",
+                "desc": "Crack and decrypt BLE encryption.->",
+                "repo": "https://github.com/mikeryan/crackle",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "22": {
+                "name": "mfoc",
+                "desc": "Mifare Classic Offline Cracker.->",
+                "repo": "https://github.com/nfc-tools/mfoc",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "23": {
+                "name": "QRLJacking",
+                "desc": "QRLJacking or Quick Response Code Login Jacking is a simple-but-nasty attack vector affecting all the applications that relays on \u201cLogin with QR code\u201d feature as a secure way to login into accounts which aims for hijacking users session by attackers..->",
+                "repo": "https://github.com/OWASP/QRLJacking",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "24": {
+                "name": "WiFi-Pumpkin",
+                "desc": "Framework for Rogue Wi-Fi Access Point Attack.->",
+                "repo": "https://github.com/P0cL4bs/WiFi-Pumpkin-deprecated",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "25": {
+                "name": "Blazy",
+                "desc": "Blazy is a modern login bruteforcer which also tests for CSRF, Clickjacking, Cloudflare and WAF ..->",
+                "repo": "https://github.com/dinbror/blazy",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "26": {
+                "name": "Hash-Buster",
+                "desc": "Crack hashes in seconds..->",
+                "repo": "https://github.com/s0md3v/Hash-Buster",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "27": {
+                "name": "fern-wifi-cracker",
+                "desc": "Automatically exported from code.google.com/p/fern-wifi-cracker.->",
+                "repo": "https://github.com/savio-code/fern-wifi-cracker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "28": {
+                "name": "HT-WPS-Breaker",
+                "desc": "HT-WPS Breaker (High Touch WPS Breaker).->",
+                "repo": "https://github.com/SilentGhostX/HT-WPS-Breaker",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "29": {
+                "name": "Wordpresscan",
+                "desc": "WPScan rewritten in Python + some WPSeku ideas.->",
+                "repo": "https://github.com/swisskyrepo/Wordpresscan",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "30": {
+                "name": "ridenum",
+                "desc": "Rid_enum is a null session RID cycle attack for brute forcing domain controllers..->",
+                "repo": "https://github.com/trustedsec/ridenum",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "31": {
+                "name": "Blazy",
+                "desc": "Blazy is a modern login bruteforcer which also tests for CSRF, Clickjacking, Cloudflare and WAF ..->",
+                "repo": "https://github.com/dinbror/blazy",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "32": {
+                "name": "Hash-Buster",
+                "desc": "Crack hashes in seconds..->",
+                "repo": "https://github.com/s0md3v/Hash-Buster",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "33": {
+                "name": "pixiewps",
+                "desc": "An offline Wi-Fi Protected Setup brute-force utility.->",
+                "repo": "https://github.com/nxxxu/AutoPixieWps",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "34": {
+                "name": "brutespray",
+                "desc": "Brute-Forcing from Nmap output - Automatically attempts default creds on found services..->",
+                "repo": "https://github.com/x90skysn3k/brutespray",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            }
+        },
+        "04": {
+            "01": {
+                "name": "torshammer",
+                "desc": "Tor's hammer. Slow post DDOS tool written in python..->",
+                "repo": "https://github.com/dotfighter/torshammer",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "02": {
+                "name": "slowloris",
+                "desc": "Low bandwidth DoS tool. Slowloris rewrite in Python..->",
+                "repo": "https://github.com/gkbrk/slowloris",
+                "reqs": "python",
+                "help_cmd": "ls"
+            },
+            "03": {
+                "name": "hulk",
+                "desc": "HULK DoS tool ported to Go with some additional features..->",
+                "repo": "https://github.com/grafov/hulk",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "04": {
+                "name": "wreckuests",
+                "desc": "Wreckuests \u2014 yet another one hard-hitting tool to run DDoS atacks with HTTP-flood.->",
+                "repo": "https://github.com/abriginets/wreckuests",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "05": {
+                "name": "GoldenEye",
+                "desc": "GoldenEye Layer 7 (KeepAlive+NoCache) DoS Test Tool.->",
+                "repo": "https://github.com/jseidl/GoldenEye",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "06": {
+                "name": "eaphammer",
+                "desc": "Targeted evil twin attacks against WPA2-Enterprise networks. Indirect wireless pivots using hostile portal attacks..->",
+                "repo": "https://github.com/s0lst1c3/eaphammer",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "07": {
+                "name": "DDosy",
+                "desc": "Perform a Ddos attack with Threads (Educational purpose).->",
+                "repo": "https://github.com/Sanix-Darker/DDosy",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            },
+            "08": {
+                "name": "slowhttptest",
+                "desc": "Application Layer DoS attack simulator.->",
+                "repo": "https://github.com/shekyan/slowhttptest",
+                "reqs": "bash",
+                "help_cmd": "ls"
+            }
+        }
+    }
+}
