@@ -62,6 +62,8 @@ Tool-X acts like a **specialized package manager for hacking & security tools**.
 - Lightweight & Fast CLI Framework  
 
 This level of automation is rarely seen in Termux-based frameworks.
+<img width="892" height="647" alt="image" src="https://github.com/user-attachments/assets/91f17557-3e66-43c2-8d95-5a57c7d65055" />
+
 
 ---
 
@@ -212,7 +214,8 @@ Misuse of tools is the sole responsibility of the user.
 
 ![Developer](https://img.shields.io/badge/Developer-Lokesh%20Kumar-6a1b9a?style=for-the-badge)
 
-GitHub: https://github.com/trmxvibs  
+- [GitHub](https://github.com/trmxvibs)
+- [YOUTUBE](https://www.youtube.com/@termux2)
 
 ---
 
