@@ -1,4 +1,11 @@
-# Tool-X — Ultimate Multi-Platform Tool Installer (280+ Tools Framework)
+<div align="center">
+
+# ` TOOL-X `
+
+</div>
+
+# Ultimate Multi-Platform Tool Installer (280+ Tools Framework)
+---
 
 ![Stars](https://img.shields.io/github/stars/trmxvibs/Tool-X?style=for-the-badge&color=ffcc00&logo=github)
 ![Forks](https://img.shields.io/github/forks/trmxvibs/Tool-X?style=for-the-badge&color=ff8800&logo=github)
@@ -14,22 +21,12 @@
 ---
 
 ![About](https://img.shields.io/badge/About-Tool--X%20Framework-ff6f00?style=for-the-badge)
+- Tool-X is a high-end, professional, and automation-focused CLI framework designed to install and manage **280+ hacking, OSINT, security, and research tools** directly from GitHub with a single interactive interface.
 
-Tool-X is a high-end, professional, and automation-focused CLI framework designed to install and manage **280+ hacking, OSINT, security, and research tools** directly from GitHub with a single interactive interface.
+- **`This is not just a tool installer.`**  
+- This is a full-scale terminal framework engineered for power users, ethical hackers, researchers, and advanced Termux/Linux users who want speed, automation, and scalability in their workflow.
 
-This is not just a tool installer.  
-This is a full-scale terminal framework engineered for power users, ethical hackers, researchers, and advanced Termux/Linux users who want speed, automation, and scalability in their workflow.
-
-Instead of wasting hours manually cloning repositories, fixing dependencies, and configuring tools one-by-one, Tool-X centralizes the entire process into a single intelligent dashboard.
-
-Real-world example:  
-A cybersecurity learner normally installs tools manually:
-- git clone tool1  
-- git clone tool2  
-- install dependencies  
-- fix errors  
-
-With Tool-X → Just select Tool ID → Automatic installation begins instantly.
+- Instead of wasting hours manually cloning repositories, fixing dependencies, and configuring tools one-by-one, Tool-X centralizes the entire process into a single intelligent dashboard.
 
 ---
 
@@ -46,6 +43,9 @@ With Tool-X → Just select Tool ID → Automatic installation begins instantly.
 Tool-X acts like a **specialized package manager for hacking & security tools**.
 
 ---
+
+<img width="892" height="537" alt="image" src="https://github.com/user-attachments/assets/88a30a30-a02a-41b6-9296-39e66df102be" />
+
 
 ![Elite Features](https://img.shields.io/badge/Elite-Features-00acc1?style=for-the-badge)
 
