@@ -1,4 +1,5 @@
 # Contributing to Tool-X
+![Contribute](https://img.shields.io/badge/Contribute-Guide-green)
 
 Thank you for your interest in contributing to Tool-X.
 
