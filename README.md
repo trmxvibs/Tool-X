@@ -81,7 +81,7 @@ This level of automation is rarely seen in Termux-based frameworks.
 ---
 ---
 
-# Documentation
+![Docs](https://img.shields.io/badge/Docs-Architecture-blue)
 
 Developers → [Architecture Guide](ARCHITECTURE.md)
 
