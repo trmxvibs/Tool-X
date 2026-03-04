@@ -79,6 +79,9 @@ This level of automation is rarely seen in Termux-based frameworks.
 | WSL (Windows) | Supported |
 
 ---
+## ⭐ Star History
+
+<img src="https://api.star-history.com/svg?repos=trmxvibs/Tool-X&type=Date" alt="Star History Chart">
 
 ![One Command Installation](https://img.shields.io/badge/One%20Command-Install-00e5ff?style=for-the-badge)
 
