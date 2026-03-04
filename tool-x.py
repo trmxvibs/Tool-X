@@ -33,7 +33,7 @@ FAV_FILE = os.path.expanduser("~/tool-x_favs.json")
 
 class ToolX:
     def __init__(self):
-        self.version = "2.1 (Multi-Platform)"
+        self.version = "LOKESH-KUMAR"
         self.favorites = self.load_favorites()
 
     def load_favorites(self):
