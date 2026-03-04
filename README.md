@@ -79,6 +79,17 @@ This level of automation is rarely seen in Termux-based frameworks.
 | WSL (Windows) | Supported |
 
 ---
+---
+
+# Documentation
+
+Developers → [Architecture Guide](ARCHITECTURE.md)
+
+Contributors → [Adding Tools Guide](ADDING_TOOLS.md)
+
+Community → [Contribution Guide](CONTRIBUTING.md)
+
+---
 ## ⭐ Star History
 
 <img src="https://api.star-history.com/svg?repos=trmxvibs/Tool-X&type=Date" alt="Star History Chart">
