@@ -41,9 +41,8 @@ python tool-x.py
 
 # Adding New Tools
 
-All tools are stored inside:
-core/tools.json
-Example format:
+All tools are stored inside: `core/tools.json`
+- **Example format:**
 
 ```json
 {
