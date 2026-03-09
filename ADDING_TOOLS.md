@@ -4,7 +4,7 @@ Tool-X uses a JSON based tool database.
 
 All tools are stored inside:
 
-core/tools.json
+`core/data.json`
 
 ---
 
@@ -13,26 +13,33 @@ core/tools.json
 Each tool entry follows this structure:
 
 ```json
-"name": "ToolName",
-"desc": "Tool description",
-"repo": "https://github.com/example/tool
-",
-"reqs": "bash",
-"help_cmd": "ls"
+"ToolName": {
+    "name": "ToolName",
+    "desc": "Short description of the tool",
+    "category": ["web_hacking", "osint"],
+    "url": "[https://github.com/example/tool.git](https://github.com/example/tool.git)",
+    "package_manager": "git",
+    "dependency": ["python", "bash", "git"],
+    "os": ["linux", "termux", "macos"]
+}
 ```
 ---
 
 ## Example Tool Entry
 ```json
-"21": {
-"name": "ExampleTool",
-"desc": "Example OSINT tool",
-"repo": "https://github.com/example/tool
-",
-"reqs": "python",
-"help_cmd": "python tool.py"
+"seeker": {
+        "name": "seeker",
+        "desc": "Accurately Locate Smartphones using Social Engineering.",
+        "url": "https://github.com/thewhiteh4t/seeker",
+        "category": [
+            "Social Engineering & Phishing"
+        ],
+        "dependency": [
+            "bash"
+        ],
+        "package_manager": "git"
+    },
 
-}
 ```
 
 
@@ -52,15 +59,11 @@ Each tool entry follows this structure:
 
 ## Steps to Add a Tool
 
-1 Open:core/tools.json
-
-2 Select a category
-
-3 Add a new tool entry
-
-4 Test installation
-
-5 Submit Pull Request
+1. Open:`core/data.json`
+2. Select a category
+3. Add a new tool entry
+4. Test installation
+5. Submit Pull Request
 
 ---
 
