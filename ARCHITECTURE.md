@@ -8,28 +8,29 @@ The system consists of four main components.
 
 ## 1. CLI Engine
 
-File:tool-x.py
+**File:** `tool-x.py`
 
-Responsibilities:
-
+**Responsibilities:**
 - Interactive terminal dashboard  
 - Tool search system  
 - Favorites manager  
 - Pagination system  
 - Category navigation  
+
 This file acts as the main controller of the entire framework.
+
 ---
 
 ## 2. Installation Engine
 
-File:core/installation_logic.py
+**File:** `core/installation_logic.py`
 
-Responsibilities:
-
-- Install tools from GitHub  
+**Responsibilities:**
+- Install tools from GitHub or via Curl
 - Clone repositories  
-- Install dependencies  
-- Handle errors and logs  
+- Install dependencies automatically
+- Universal OS Compatibility Check (Termux, Linux, Windows, Mac)
+- Handle errors and secure logging  
 
 All tool installation logic is centralized here.
 
@@ -37,31 +38,28 @@ All tool installation logic is centralized here.
 
 ## 3. Tool Database Loader
 
-File:core/tool_data.py
+**File:** `core/tool_data.py`
 
-Responsibilities:
+**Responsibilities:**
+- Load `data.json` database  
+- Parse and merge categories dynamically 
+- Provide structured data and numeric IDs to the CLI engine
 
-- Load tools.json database  
-- Parse categories  
-- Provide structured data to CLI engine
-
-This allows the framework to scale easily.
+This allows the framework to scale easily to thousands of tools.
 
 ---
 
 ## 4. Tool Database
 
-File:
+**File:** `core/data.json`
 
-core/tools.json
-
-Contains:
-
+**Contains:**
 - tool name  
 - description  
-- GitHub repository  
+- GitHub repository URL
+- supported OS
+- package manager
 - dependencies  
-- help commands  
 
 Because tools are stored in JSON format, adding new tools requires **no Python code modification**.
 
@@ -69,12 +67,20 @@ Because tools are stored in JSON format, adding new tools requires **no Python c
 
 ## Data Flow
 
-- tools.json
+`data.json`
+
      ↓
-- tool_data.py
+     
+`core/tool_data.py`
+
      ↓
-- tool-x.py
+     
+`tool-x.py`
+
      ↓
-- installation_logic.py
+
+`core/installation_logic.py`
+
      ↓
-- GitHub tool installation
+
+`Tool Installation`
