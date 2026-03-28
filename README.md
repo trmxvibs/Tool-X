@@ -103,7 +103,7 @@ bash <(curl -s https://raw.githubusercontent.com/trmxvibs/Tool-X/main/setup.sh)
 ```
 ## Run the framework:
 ```sh
-Tool-x
+Tool-x, toolx, tool-x, Toolx
 ```
 ----
 
