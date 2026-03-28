@@ -1,14 +1,16 @@
 #!/bin/bash
 # Author: Lokesh Kumar
-# Update: 08/03/2026
-# setup.sh 
+# Update: 28/03/2026
+# Project: Tool-X Universal Installer
 
 TOOL_DIR="$HOME/tool-x"
 REPO_URL="https://github.com/trmxvibs/Tool-X"
 INSTALLER_SCRIPT="tool-x.py"
-ALIAS_NAME="Tool-x"
 
-# Define colors
+# User-friendly command variations (Case-insensitivity)
+COMMANDS=("toolx" "Toolx" "Tool-x" "tool-x")
+
+# Colors for UI
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 RED='\033[1;31m'
@@ -16,87 +18,109 @@ NC='\033[0m'
 
 echo -e "\n${GREEN}[*] Initializing Tool-X Universal Setup...${NC}"
 
-# >> Step 1: Detect Environment & Install Dependencies ---
+# --- STEP 1: Advanced OS & Package Manager Detection ---
 echo -e "${YELLOW}[*] Detecting Operating System and Package Manager...${NC}"
 
 if [ -d "$PREFIX" ] && grep -q "com.termux" "$PREFIX/etc/bash.bashrc" 2>/dev/null; then
-    IS_TERMUX=true
+    # 1. Termux (Android)
+    OS_TYPE="termux"
+    BIN_DIR="$PREFIX/bin"
     echo -e "${GREEN}[+] Environment: Termux Detected.${NC}"
-    pkg update -y
-    pkg install git python -y
+    pkg update -y && pkg install git python -y
+
+elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" || "$OSTYPE" == "win32" ]]; then
+    # 2. Windows (Git Bash / MSYS2)
+    OS_TYPE="windows"
+    echo -e "${GREEN}[+] Environment: Windows Detected.${NC}"
+    # Windows users need to have Git and Python installed manually
+
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # 3. macOS
+    OS_TYPE="macos"
+    BIN_DIR="/usr/local/bin"
+    echo -e "${GREEN}[+] Environment: macOS (Homebrew) Detected.${NC}"
+    if command -v brew >/dev/null; then
+        brew install git python
+    else
+        echo -e "${RED}[!] Homebrew not found. Please install Homebrew first.${NC}"
+    fi
+
 else
-    IS_TERMUX=false
-    #>> Smart Package Manager Detection for Linux/Mac
+    # 4. Linux Distributions (Debian, Ubuntu, Kali, Parrot, Arch, Manjaro, BlackArch, Fedora, RedHat)
+    OS_TYPE="linux"
+    BIN_DIR="/usr/local/bin"
+    
     if command -v apt-get >/dev/null; then
         echo -e "${GREEN}[+] Environment: Debian/Ubuntu/Kali/Parrot Detected.${NC}"
-        sudo apt-get update -y
-        sudo apt-get install git python3 python3-pip -y
+        sudo apt-get update -y && sudo apt-get install git python3 python3-pip -y
     elif command -v pacman >/dev/null; then
         echo -e "${GREEN}[+] Environment: Arch/Manjaro/BlackArch Detected.${NC}"
         sudo pacman -Sy --noconfirm git python python-pip
     elif command -v dnf >/dev/null; then
         echo -e "${GREEN}[+] Environment: Fedora/RedHat Detected.${NC}"
         sudo dnf install -y git python3 python3-pip
-    elif command -v brew >/dev/null; then
-        echo -e "${GREEN}[+] Environment: macOS (Homebrew) Detected.${NC}"
-        brew install git python
     else
-        echo -e "${YELLOW}[!] Package manager not recognized (Windows/GitBash?). Please install Git and Python manually.${NC}"
+        echo -e "${RED}[!] Unknown Linux Distro. Attempting manual dependency check...${NC}"
     fi
 fi
 
-# >>> Step 2: Install Python Requirements ---
+# --- STEP 2: Python Libraries Setup ---
 echo -e "\n${YELLOW}[*] Installing Python Libraries (Rich UI)...${NC}"
-# >>break-system-packages is used for newer Python versions (PEP 668)
+# Handling PEP 668 for newer Linux distros
 pip install rich requests beautifulsoup4 --break-system-packages 2>/dev/null || pip install rich requests beautifulsoup4
 
-# >> Step 3: Clone or Update Repository ---
+# --- STEP 3: Clone or Update Tool-X ---
 if [ -d "$TOOL_DIR" ]; then
-    echo -e "\n${YELLOW}[*] Updating Tool-X...${NC}"
+    echo -e "\n${YELLOW}[*] Updating Tool-X Repository...${NC}"
     cd "$TOOL_DIR" || exit
     git pull
 else
-    echo -e "\n${GREEN}[*] Cloning Tool-X...${NC}"
+    echo -e "\n${GREEN}[*] Cloning Tool-X Repository...${NC}"
     git clone "$REPO_URL" "$TOOL_DIR"
     cd "$TOOL_DIR" || exit
 fi
-
 chmod +x "$INSTALLER_SCRIPT" 2>/dev/null || true
 
-# >> Step 4: Smart Alias Setup (Handles bash and zsh) ---
-echo -e "\n${YELLOW}[*] Setting up shortcut command...${NC}"
+# --- STEP 4: Centralization (The Global Shortcut Logic) ---
+echo -e "\n${YELLOW}[*] Centralizing Commands for Global Access...${NC}"
 
-if [ "$IS_TERMUX" = true ]; then
-    SHELL_RC="$PREFIX/etc/bash.bashrc"
-else
-    # Check if user is using zsh (Default in Kali & Mac)
-    if [ "$(basename "$SHELL")" = "zsh" ]; then
-        SHELL_RC="$HOME/.zshrc"
-    else
-        SHELL_RC="$HOME/.bashrc"
-    fi
-fi
+if [ "$OS_TYPE" == "windows" ]; then
+    # Windows CMD/PowerShell Support (.bat files)
+    for cmd in "${COMMANDS[@]}"; do
+        echo "@echo off" > "$TOOL_DIR/$cmd.bat"
+        echo "python \"$TOOL_DIR/$INSTALLER_SCRIPT\" %*" >> "$TOOL_DIR/$cmd.bat"
+    done
+    # Git Bash Support (Linux-like wrapper in ~/bin)
+    mkdir -p "$HOME/bin"
+    for cmd in "${COMMANDS[@]}"; do
+        echo "python \"$TOOL_DIR/$INSTALLER_SCRIPT\" \"\$@\"" > "$HOME/bin/$cmd"
+        chmod +x "$HOME/bin/$cmd"
+    done
+    echo -e "${GREEN}[+] Windows Batch and Bash wrappers created.${NC}"
 
-if [ -f "$SHELL_RC" ]; then
-    ALIAS_CMD="alias $ALIAS_NAME='python $TOOL_DIR/$INSTALLER_SCRIPT'"
-    
-    if grep -q "alias $ALIAS_NAME=" "$SHELL_RC"; then
-        echo -e "${YELLOW}[!] Alias '$ALIAS_NAME' already exists in $SHELL_RC.${NC}"
-    else
-        echo -e "\n# Tool-X Alias" >> "$SHELL_RC"
-        echo "$ALIAS_CMD" >> "$SHELL_RC"
-        echo -e "${GREEN}[+] Shortcut '$ALIAS_NAME' added to $SHELL_RC${NC}"
-    fi
 else
-    echo -e "${YELLOW}[!] Shell config file not found. Run tool manually: python $TOOL_DIR/$INSTALLER_SCRIPT${NC}"
+    # Linux, macOS, and Termux (Global binary creation)
+    SUDO_CMD=""
+    [ "$OS_TYPE" != "termux" ] && SUDO_CMD="sudo"
+
+    for cmd in "${COMMANDS[@]}"; do
+        WRAPPER="#!/bin/bash\npython3 \"$TOOL_DIR/$INSTALLER_SCRIPT\" \"\$@\""
+        if [ "$OS_TYPE" == "termux" ]; then
+             echo -e "$WRAPPER" > "$BIN_DIR/$cmd"
+             chmod +x "$BIN_DIR/$cmd"
+        else
+             echo -e "$WRAPPER" | $SUDO_CMD tee "$BIN_DIR/$cmd" > /dev/null
+             $SUDO_CMD chmod +x "$BIN_DIR/$cmd"
+        fi
+    done
+    echo -e "${GREEN}[+] Centralized commands created in $BIN_DIR${NC}"
 fi
 
 echo -e "\n${GREEN}========================================${NC}"
-echo -e "${GREEN}   Setup Complete! Type: $ALIAS_NAME ${NC}"
+echo -e "${GREEN}   Setup Complete! Type: toolx ${NC}"
 echo -e "${GREEN}========================================${NC}"
+echo -e "${YELLOW}Supported Commands: ${NC}${COMMANDS[*]}"
 
-if [ "$IS_TERMUX" = true ]; then
-    echo -e "${YELLOW}Please restart Termux to apply changes.${NC}"
-else
-    echo -e "${YELLOW}Please restart your terminal or type: source $SHELL_RC${NC}"
+if [ "$OS_TYPE" == "windows" ]; then
+    echo -e "\n${RED}[!] Windows Note:${NC} Add '$TOOL_DIR' to your System PATH to use commands in CMD."
 fi
