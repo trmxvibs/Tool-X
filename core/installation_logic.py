@@ -1,6 +1,6 @@
 # File: core/installation_logic.py
-# Update: 09/03/2026
-# Lokesh-kumar
+# Update:12/04/2026 
+# Developer: Lokesh-kumar 
 import os
 import time
 import subprocess
@@ -11,7 +11,6 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.panel import Panel
 from rich.text import Text
 from rich.prompt import Confirm
-
 
 from core.tool_data import RAW_TOOLS
 
@@ -50,27 +49,32 @@ CURRENT_OS = detect_os()
 
 # >> SMART PACKAGE MANAGER 
 def get_install_command(pkg):
-    """Returns the correct installation command based on the OS"""
+    """Returns the correct installation command as a secure LIST based on the OS"""
     if CURRENT_OS == "termux":
-        return f"pkg install -y {pkg}"
+        return ["pkg", "install", "-y", pkg]
     elif CURRENT_OS == "macos":
-        return f"brew install {pkg}"
+        return ["brew", "install", pkg]
+    elif CURRENT_OS == "windows":
+        if shutil.which("choco"):
+            return ["choco", "install", pkg, "-y"]
+        elif shutil.which("winget"):
+            return ["winget", "install", pkg, "-e", "--accept-package-agreements"]
+        return None
     elif CURRENT_OS == "linux":
-        
         if shutil.which("apt-get"):
-            return f"sudo apt-get install -y {pkg}"
+            return ["sudo", "apt-get", "install", "-y", pkg]
         elif shutil.which("pacman"):
-            return f"sudo pacman -S --noconfirm {pkg}"
+            return ["sudo", "pacman", "-S", "--noconfirm", pkg]
         elif shutil.which("dnf"):
-            return f"sudo dnf install -y {pkg}"
+            return ["sudo", "dnf", "install", "-y", pkg]
         elif shutil.which("yum"):
-            return f"sudo yum install -y {pkg}"
+            return ["sudo", "yum", "install", "-y", pkg]
         else:
-            return f"sudo apt-get install -y {pkg}" 
+            return ["sudo", "apt-get", "install", "-y", pkg] 
     return None
 
-def run_command(command, description, cwd=None):
-    """Runs commands with a progress spinner"""
+def run_command(command_list, description, cwd=None):
+    """Runs commands securely (shell=False) with a progress spinner"""
     with Progress(
         SpinnerColumn(),
         TextColumn("[progress.description]{task.description}"),
@@ -78,13 +82,15 @@ def run_command(command, description, cwd=None):
     ) as progress:
         progress.add_task(description=description, total=None)
         try:
+            # shell=False is used automatically because we are passing a list. This is 100% secure.
             result = subprocess.run(
-                command, shell=True, cwd=cwd, capture_output=True, text=True
+                command_list, shell=False, cwd=cwd, capture_output=True, text=True
             )
             if result.returncode != 0:
                 timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
                 with open(LOG_FILE, "a", encoding='utf-8') as f:
-                    f.write(f"\n[{timestamp}] FAILED: {command}\nERROR: {result.stderr}\n")
+                    cmd_str = " ".join(command_list)
+                    f.write(f"\n[{timestamp}] FAILED: {cmd_str}\nERROR: {result.stderr}\n")
                 return False, result.stderr
             return True, result.stdout
         except Exception as e:
@@ -104,16 +110,14 @@ def check_dependencies(deps_list):
         
         console.print(f"[dim]Installing missing dependency: {pkg}...[/]")
         
-        if CURRENT_OS == "windows":
-             console.print(f"[yellow]⚠️ Skipping auto-install for '{pkg}' on Windows. Please install it manually.[/]")
-             continue
-             
         install_cmd = get_install_command(pkg)
         
         if install_cmd:
             success, _ = run_command(install_cmd, f"Installing {pkg}...")
             if not success:
                 console.print(f"[bold red]Failed to install dependency: {pkg}[/]")
+                if CURRENT_OS == "windows":
+                     console.print(f"[yellow]  Try installing '{pkg}' manually on Windows.[/]")
                 return False
         else:
             console.print(f"[yellow]Could not determine package manager for '{pkg}'. Install manually.[/]")
@@ -121,7 +125,7 @@ def check_dependencies(deps_list):
     return True
 
 def install_tool(tool_key):
-    """Main installation logic with Universal OS Compatibility Check"""
+    """Main installation logic with Universal OS Compatibility Check & Secure Execution"""
     try:
         tool_data = RAW_TOOLS[tool_key]
     except KeyError:
@@ -133,11 +137,10 @@ def install_tool(tool_key):
     pkg_manager = tool_data.get("package_manager", "git")
     
     # >> UNIVERSAL OS COMPATIBILITY CHECK 
-    # Default to ALL platforms if "os" tag is not specifically defined in JSON
     supported_os = tool_data.get("os", ["linux", "termux", "windows", "macos", "other"]) 
     
     if CURRENT_OS not in supported_os:
-        console.print(f"\n[bold yellow]⚠️ WARNING: This tool is officially optimized for {', '.join(supported_os).upper()}[/]")
+        console.print(f"\n[bold yellow]  WARNING: This tool is officially optimized for {', '.join(supported_os).upper()}[/]")
         console.print(f"[yellow]Your current OS is: [bold red]{CURRENT_OS.upper()}[/][/yellow]")
         
         proceed = Confirm.ask("[bold red]Do you still want to force the installation?[/]")
@@ -156,17 +159,20 @@ def install_tool(tool_key):
     if not check_dependencies(tool_data.get("dependency", [])): 
         return
 
-    # 2. Tool Download / Update
+    # 2. Tool Download / Update (Using Secure Lists)
     if pkg_manager == "git":
         if os.path.exists(install_dir):
-            cmd, desc = f"git -C {install_dir} pull", f"Updating {tool_name}..."
+            cmd = ["git", "-C", install_dir, "pull"]
+            desc = f"Updating {tool_name}..."
         else:
-            cmd, desc = f"git clone {repo_url} {install_dir}", f"Cloning {tool_name}..."
+            cmd = ["git", "clone", repo_url, install_dir]
+            desc = f"Cloning {tool_name}..."
     elif pkg_manager == "curl":
         if not os.path.exists(install_dir):
             os.makedirs(install_dir)
         filename = repo_url.split("/")[-1]
-        cmd, desc = f"curl -Lo {os.path.join(install_dir, filename)} {repo_url}", f"Downloading {tool_name}..."
+        cmd = ["curl", "-Lo", os.path.join(install_dir, filename), repo_url]
+        desc = f"Downloading {tool_name}..."
     else:
         console.print(f"[red]Error: Unsupported package manager '{pkg_manager}'[/]")
         return
@@ -176,10 +182,10 @@ def install_tool(tool_key):
         console.print(f"[bold red]Installation Failed![/] Check logs in {LOG_FILE}")
         return
 
-    # 3. Post Install (Secure permissions - skipped on Windows as chmod doesn't work there natively)
+    # 3. Post Install (Secure permissions setup)
     if CURRENT_OS != "windows":
-        run_command(f"find {install_dir} -type f -name '*.sh' -exec chmod +x {{}} \\;", "Setting up secure permissions...")
-        run_command(f"find {install_dir} -type f -name '*.py' -exec chmod +x {{}} \\;", "Setting up secure permissions...")
+        run_command(["find", install_dir, "-type", "f", "-name", "*.sh", "-exec", "chmod", "+x", "{}", ";"], "Setting up secure permissions (.sh)...")
+        run_command(["find", install_dir, "-type", "f", "-name", "*.py", "-exec", "chmod", "+x", "{}", ";"], "Setting up secure permissions (.py)...")
     
     # 4. Success Message
     msg = Text()
