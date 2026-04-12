@@ -1,9 +1,13 @@
 # File: core/tool_data.py
-# Update: 09/03/2026
-# Lokesh-Kumar
+# Update:12/04/2026 
+# Developer: Lokesh-Kumar 
 import json
 import os
 import sys
+from rich.console import Console
+from rich.panel import Panel
+
+console = Console()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_FILE = os.path.join(BASE_DIR, 'core', 'data.json')
@@ -27,7 +31,8 @@ def clean_category_name(cat_name):
 
 def load_data():
     if not os.path.exists(JSON_FILE):
-        print(f"[!] Error: {JSON_FILE} not found! Please check.")
+        console.print(f"\n[bold red][!] CRITICAL ERROR:[/] [yellow]{JSON_FILE}[/] not found!")
+        console.print("[cyan]Tip: Make sure data.json exists in the core folder.[/]")
         sys.exit(1)
         
     try:
@@ -56,8 +61,13 @@ def load_data():
 
         return raw_tools, organized_tools, category_map
 
+    except json.JSONDecodeError as e:
+        err_msg = f"[bold red]Fatal Error: data.json ka format corrupt hai![/]\n\n[yellow]Technical Details:[/] {e}\n[cyan]Tip: Check karein ki file me koi extra comma (,) ya missing bracket toh nahi hai.[/]"
+        console.print(Panel(err_msg, title="[bold red]JSON Parsing Error[/]", border_style="red"))
+        sys.exit(1)
     except Exception as e:
-        print(f"[!] Error loading data: {e}")
+        console.print(f"[bold red][!] Unexpected Error loading data:[/] {e}")
         sys.exit(1)
 
+# Initialize variables securely
 RAW_TOOLS, TOOLS_BY_CATEGORY, TOOL_CATEGORIES = load_data()
