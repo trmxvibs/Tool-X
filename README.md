@@ -112,7 +112,7 @@ Tool-x, toolx, tool-x, Toolx
 
 ## This single command automatically:
 
-- Detects your environment and OS
+- Detects your environment and OS System
 
 - Installs required system dependencies (git, python)
 
