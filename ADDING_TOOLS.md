@@ -1,4 +1,4 @@
-# Adding Tools to Tool-X
+# Adding Tools to Tool-X Framework
 
 Tool-X uses a JSON based tool database.
 
