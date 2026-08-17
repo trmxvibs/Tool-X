@@ -91,7 +91,12 @@ Community → [Contribution Guide](CONTRIBUTING.md)
 ---
 ## ⭐ Star History
 
-<img src="https://api.star-history.com/svg?repos=trmxvibs/Tool-X&type=Date" alt="Star History Chart">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=trmxvibs/Tool-X&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=trmxvibs/Tool-X&type=Date" />
+  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=trmxvibs/Tool-X&type=Date" width="600" />
+</picture>
+---
 
 
 ![One Command Installation](https://img.shields.io/badge/One%20Command-Install-00e5ff?style=for-the-badge)
