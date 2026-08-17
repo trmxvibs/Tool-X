@@ -1,4 +1,6 @@
-name: ShellCheck Lint
+name: CI
+# Updated: 17/08/2026 (merged duplicate shellcheck.yml into this file,
+# un-muted shellcheck errors, added Python lint + pytest job)
 
 on:
   push:
@@ -7,18 +9,46 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
-    name: Check Bash Script Syntax
+  shellcheck:
+    name: Bash Lint (setup.sh)
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install ShellCheck
-        run: sudo apt-get install -y shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
 
-      - name: Run ShellCheck (ignore warnings)
+      - name: Run ShellCheck
+        run: shellcheck setup.sh
+
+  python:
+    name: Python Lint & Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
         run: |
-          echo "Checking setup.sh syntax..."
-          shellcheck setup.sh || true
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Lint with flake8 (syntax errors / undefined names)
+        run: flake8 . --count --select=E9,F63,F7,F82,E722 --show-source --statistics
+
+      - name: Lint with flake8 (style, non-blocking)
+        run: flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+      - name: Run tests
+        run: pytest -v
