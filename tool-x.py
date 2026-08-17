@@ -2,6 +2,7 @@
 # Developer: Lokesh Kumar
 # Framework Version: 2.0 
 # Update: 08/03/2026
+# Updated: 17/08/2026 (removed unused import, fixed 4 bare except clauses)
 #>> TOOL-X MAIN
 
 import os
@@ -29,7 +30,7 @@ console = Console()
 # <> Import Core Modules <>
 try:
     from core.tool_data import RAW_TOOLS, TOOLS_BY_CATEGORY, TOOL_CATEGORIES
-    from core.installation_logic import install_tool, LOG_FILE, INSTALLED_TOOLS_FILE, TOOLX_SYSTEM_DIR
+    from core.installation_logic import install_tool, INSTALLED_TOOLS_FILE, TOOLX_SYSTEM_DIR
 except ImportError as e:
     console.print(f"[bold red]CRITICAL ERROR:[/] Could not import core modules.\nDetails: {e}")
     sys.exit(1)
@@ -49,7 +50,7 @@ class ToolX:
             s.connect(("8.8.8.8", 80))
             ip = s.getsockname()[0]
             s.close()
-        except:
+        except OSError:
             ip = "127.0.0.1 (Offline)"
 
         return {
@@ -106,8 +107,10 @@ class ToolX:
     def load_favorites(self):
         if os.path.exists(FAV_FILE):
             try:
-                with open(FAV_FILE, 'r') as f: return json.load(f)
-            except: return []
+                with open(FAV_FILE, 'r') as f:
+                    return json.load(f)
+            except (OSError, json.JSONDecodeError):
+                return []
         return []
 
     def save_favorites(self):
@@ -191,9 +194,10 @@ class ToolX:
             console.print("[yellow]No installed tools found.[/]"); time.sleep(1.5); return
 
         try:
-            with open(INSTALLED_TOOLS_FILE, 'r') as f: 
-                lines = [l for l in f.readlines() if l.strip()]
-        except: return
+            with open(INSTALLED_TOOLS_FILE, 'r') as f:
+                lines = [line for line in f.readlines() if line.strip()]
+        except OSError:
+            return
         
         if not lines: console.print("[yellow]You haven't installed any tools yet.[/]"); time.sleep(1.5); return
 
@@ -208,7 +212,8 @@ class ToolX:
                 name, path = line.strip().split('|')
                 table.add_row(str(idx+1), name, path)
                 installed_map[str(idx+1)] = (name, path, line)
-            except: continue
+            except ValueError:
+                continue
 
         console.print(table)
         choice = Prompt.ask("[red]Select ID to uninstall (00 to go back)[/]").strip()
