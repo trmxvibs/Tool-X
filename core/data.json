@@ -13290,7 +13290,7 @@
     },
     "gitem": {
         "name": "gitem",
-        "desc": "A Github organization reconnaissance tool.",                
+        "desc": "A Github organization reconnaissance tool.",
         "url": "https://github.com/mschwager/gitem.git",
         "category": [
             "uncategorized"
