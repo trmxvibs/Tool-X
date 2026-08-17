@@ -1,0 +1,4 @@
+# Updated: 17/08/2026 (new file — previously deps were only inline in setup.sh)
+rich
+requests
+beautifulsoup4
